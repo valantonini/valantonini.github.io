@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Outer Iframe</title>
+    <!--<script src="http://arakawa.asia/bower_components/jquery/dist/jquery.min.js"></script>-->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>if (!window.jQuery) {
+    var localjQuery = 'http://arakawa.asia/bower_components/jquery/dist/jquery.min.js';
+    var localjQueryScript = '<script src="'+localjQuery+'"><\/script>';
+    document.write(localjQueryScript);
+}
+</script>
+    <script>
+    $(document).ready(function () {
+        $(window).bind('message', function (event) {
+            var x = JSON.parse(event.originalEvent.data);
+            alert("outer iframe received: " + x.MyProperty);
+        });
+    });
+    
+    function postMessageToInner() {
+        var sampleJsonObject = {
+            MyProperty: "Outer Iframe Value"
+        };
+
+        var iFrameContentWindow = $("#innerIframe")[0].contentWindow;
+        iFrameContentWindow.postMessage(
+            JSON.stringify(sampleJsonObject),
+            "http://arakawa.asia"
+        );
+    }
+    </script>
+</head>
+<body>
+    <div>
+    Outer Iframe
+    <button onclick="postMessageToInner();">Post message to inner</button>
+    </div>
+    <iframe id="innerIframe" src="http://arakawa.asia/samples/iFrameCommunication/InnerIframe"></iframe>
+</body>
+</html>

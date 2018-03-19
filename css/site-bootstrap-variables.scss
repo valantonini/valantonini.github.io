@@ -1,0 +1,31 @@
+$font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-serif:       "Merriweather", Georgia, "Times New Roman", Times, serif;
+//** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
+$font-family-monospace:    Menlo, Consolas, Monaco, "Courier New", monospace;
+
+$base-bg: #000;
+$base-text: #444;
+$base-color: #fff;
+$base-border-radius: 0px;
+$base-gray: #eaeaea;
+$base-small-font-size: 12px;
+
+$navbar-default-bg: transparent;
+$navbar-default-link-active-color: #333;
+$navbar-default-link-color: #333;
+$navbar-default-link-hover-color: #333;
+
+$border-radius-base: $base-border-radius;
+
+$pre-bg: transperant;
+
+$text-color: $base-text;
+$font-size-base:  18px;
+$font-family-base: $font-family-serif;
+$headings-font-weight: 300;
+
+
+
+$pagination-bg: $base-bg;
+$pager-hover-bg: $base-gray;
+//$pager-border-radius: $base-border-radius

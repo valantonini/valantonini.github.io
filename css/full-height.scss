@@ -1,0 +1,19 @@
+$footer-height: 40px;
+html, body, .arakawa-bg {
+  height: 100%;
+}
+
+body > .arakawa-bg > .container {
+  height: auto;
+  min-height: 100%;
+  padding-bottom: $footer-height;
+}
+
+footer {
+  clear: both;
+  position: relative;
+  z-index: 10;
+  height: $footer-height;
+  margin-top: $footer-height * -1;
+  @extend .text-center;
+}

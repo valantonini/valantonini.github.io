@@ -1,0 +1,17 @@
+.search {
+  .search-results {
+    margin-top: 30px;
+  }
+
+  #search-results-container {
+    list-style: none;
+    padding-left: 0;
+    li {
+      padding: 3px 0;
+    }
+    a {
+      color: $base-text;
+      text-decoration: underline;
+    }
+  }
+}

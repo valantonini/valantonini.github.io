@@ -1,0 +1,7 @@
+.btn-arakawa {
+  @include button-variant(#ffffff, #000000, #f5f5f5);
+}
+
+.btn-gray {
+  @include button-variant($base-text, $base-gray, $btn-default-border);
+}

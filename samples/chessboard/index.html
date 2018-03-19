@@ -1,0 +1,100 @@
+<html>
+<head>
+    <title>Chessboard</title>
+    <!--<script src="http://arakawa.asia/bower_components/jquery/dist/jquery.min.js"></script>-->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>if (!window.jQuery) {
+    var localjQuery = 'http://arakawa.asia/bower_components/jquery/dist/jquery.min.js';
+    var localjQueryScript = '<script src="'+localjQuery+'"><\/script>';
+    document.write(localjQueryScript);
+}
+</script>
+    <style type="text/css">
+        body {
+            background-color: gray;
+        }
+
+        canvas {
+            margin: 50 auto;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<div id="chessboard" />
+<script type="text/javascript">
+
+    var gridWidth = 400;
+    var gridHeight = 400;
+    var gridPadding = 10
+
+    var tilesWide = 8;
+    var tilesHigh = 8;
+
+    var tileWidth = (gridWidth / tilesWide);
+
+    var tileHeight = ( gridHeight / tilesHigh );
+
+    var canvasWidth = gridWidth + (2 * gridPadding);
+    var canvasHeight = gridHeight + (2 * gridPadding);
+
+    var canvas = $('<canvas/>').attr({
+        width: canvasWidth,
+        height: canvasHeight
+    }).appendTo('#chessboard');
+
+    var context = canvas.get(0).getContext("2d");
+
+    drawBoard();
+
+    function drawBoard() {
+
+        drawBackground();
+
+        for (var row = 0; row <= tilesHigh - 1; row++) {
+
+            var y = (row * tileHeight) + gridPadding;
+
+            for (var column = 0; column <= tilesWide - 1; column++) {
+
+                var x = (column * tileWidth) + gridPadding;
+
+                if (isAlternate(row, column)) {
+                    drawFilledSquare(x, y);
+                }
+                else {
+                    drawEmptySquare(x, y);
+                }
+            }
+        }
+
+        context.strokeStyle = "black";
+        context.stroke();
+    }
+
+    function drawBackground() {
+        context.fillStyle = "#ffffff";
+        context.fillRect(0, 0, canvasWidth, canvasHeight);
+    }
+
+    function drawEmptySquare(x, y) {
+        context.rect(x, y, tileWidth, tileHeight);
+    }
+
+    function drawFilledSquare(x, y) {
+        context.fillStyle = "#000000";
+        context.fillRect(x, y, tileWidth, tileHeight);
+        drawEmptySquare(x, y);
+    }
+
+    function isAlternate(row, column) {
+        return (isEven(row) && !isEven(column)) ||
+                (!isEven(row) && isEven(column))
+    }
+
+    function isEven(num) {
+        return num == 0 || num % 2 == 0;
+    }
+
+</script>
+</body>
