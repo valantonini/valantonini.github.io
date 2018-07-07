@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>arakawa.asia</title>
+    <title>valantonini.com</title>
     <description>A blog about all things programming by val antonini.</description>
-    <link>https://arakawa.asia/</link>
-    <atom:link href="https://arakawa.asia/feed.xml" rel="self" type="application/rss+xml" />
+    <link>https://valantonini.com/</link>
+    <atom:link href="https://valantonini.com/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
         <title>DbUp Serilog Upgrade Log</title>
@@ -28,8 +28,8 @@
                             &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;LogToSerilog&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//add this line&lt;/span&gt;
                             &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Build&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;</description>
         <pubDate>Wed, 28 Oct 2015 07:30:00 +1000</pubDate>
-        <link>https://arakawa.asia/2015/10/28</link>
-        <guid isPermaLink="true">https://arakawa.asia/2015/10/28</guid>
+        <link>https://valantonini.com/2015/10/28</link>
+        <guid isPermaLink="true">https://valantonini.com/2015/10/28</guid>
       </item>
     
       <item>
@@ -96,14 +96,14 @@
     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;</description>
         <pubDate>Sun, 12 Jul 2015 07:30:00 +1000</pubDate>
-        <link>https://arakawa.asia/2015/07/12</link>
-        <guid isPermaLink="true">https://arakawa.asia/2015/07/12</guid>
+        <link>https://valantonini.com/2015/07/12</link>
+        <guid isPermaLink="true">https://valantonini.com/2015/07/12</guid>
       </item>
     
       <item>
         <title>The new face of arakawa.asia</title>
         <description>&lt;p&gt;
-    &lt;img src=&quot;https://arakawa.asia/images/posts/2014-12-31-arakawa.asia.png&quot; alt=&quot;arakawa logo&quot; class=&quot;align-center img-responsive&quot; style=&quot;width: 200px; height: 200px; margin-bottom: 30px&quot;&gt;
+    &lt;img src=&quot;https://valantonini.com/images/posts/2014-12-31-arakawa.asia.png&quot; alt=&quot;arakawa logo&quot; class=&quot;align-center img-responsive&quot; style=&quot;width: 200px; height: 200px; margin-bottom: 30px&quot;&gt;
     I've been meaning to give this blog a face lift for a long time and I've finally gotten around to it.
     It's built with &lt;a href=&quot;http://jekyllrb.com/&quot; title=&quot;Jekyll website&quot; target=&quot;_blank&quot;&gt;Jekyll&lt;/a&gt;,
     &lt;a href=&quot;http://getbootstrap.com/&quot; title=&quot;Bootstrap&quot; target=&quot;_blank&quot;&gt;Bootstrap&lt;/a&gt;, &lt;a href=&quot;http://sass-lang.com/&quot; title=&quot;Sass&quot; target=&quot;_blank&quot;&gt;Sass&lt;/a&gt;
@@ -113,8 +113,8 @@
     the old blog at &lt;a href=&quot;http://legacy.arakawa.asia&quot; title=&quot;old arakawa.asia&quot;&gt;http://legacy.arakawa.asia&lt;/a&gt;
 &lt;/p&gt;</description>
         <pubDate>Thu, 01 Jan 2015 07:30:00 +1000</pubDate>
-        <link>https://arakawa.asia/2015/01/01</link>
-        <guid isPermaLink="true">https://arakawa.asia/2015/01/01</guid>
+        <link>https://valantonini.com/2015/01/01</link>
+        <guid isPermaLink="true">https://valantonini.com/2015/01/01</guid>
       </item>
     
       <item>
@@ -221,14 +221,14 @@
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-csharp&quot; data-lang=&quot;csharp&quot;&gt;&lt;span class=&quot;n&quot;&gt;DeployChanges&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;To&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;SqlDatabase&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;connectionString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;GenerateLookupViewsForEnumsIn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MyProject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Assembly&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;</description>
         <pubDate>Tue, 30 Dec 2014 07:30:00 +1000</pubDate>
-        <link>https://arakawa.asia/2014/12/30</link>
-        <guid isPermaLink="true">https://arakawa.asia/2014/12/30</guid>
+        <link>https://valantonini.com/2014/12/30</link>
+        <guid isPermaLink="true">https://valantonini.com/2014/12/30</guid>
       </item>
     
       <item>
         <title>A priority queue in C# - part 2</title>
         <description>&lt;p&gt;
-In &lt;a href=&quot;https://arakawa.asia/2014/12/23&quot; title=&quot;Priority Queue in C#&quot;&gt;my last post&lt;/a&gt; I had created a simple priority queue. Unfortunately it would sort itself each time an item is popped/dequeued. I have created &lt;a href=&quot;https://github.com/valantonini/PriorityQueue&quot; title=&quot;valantonini/PriorityQueue&quot; target=&quot;_blank&quot;&gt;a better priority queue that only sorts itself when the indexed value is changed&lt;/a&gt;.
+In &lt;a href=&quot;https://valantonini.com/2014/12/23&quot; title=&quot;Priority Queue in C#&quot;&gt;my last post&lt;/a&gt; I had created a simple priority queue. Unfortunately it would sort itself each time an item is popped/dequeued. I have created &lt;a href=&quot;https://github.com/valantonini/PriorityQueue&quot; title=&quot;valantonini/PriorityQueue&quot; target=&quot;_blank&quot;&gt;a better priority queue that only sorts itself when the indexed value is changed&lt;/a&gt;.
 &lt;/p&gt;
 &lt;p&gt;
 I do this by having items implement the provided IPrioritizable interface. I was initially going to build it on the &lt;a href=&quot;http://msdn.microsoft.com/en-us/library/system.componentmodel.inotifypropertychanged(v=vs.110).aspx&quot; title=&quot;MSDN INotifyPropertyChanged Interface&quot; target=&quot;_blank&quot;&gt; INotifyPropertyChanged interface&lt;/a&gt; but I thought this solution was simpler. The interface has 2 methods to Add/Remove an Action that notifies the PriorityQueue that it needs to be sorted. It now also requires a IComparer be provided. An example of this would be:
@@ -294,14 +294,14 @@ I do this by having items implement the provided IPrioritizable interface. I was
 Whilst not as simple as it's predecessor it wastes less time ordering the queue on sequential pops.
 &lt;/p&gt;</description>
         <pubDate>Thu, 25 Dec 2014 07:30:00 +1000</pubDate>
-        <link>https://arakawa.asia/2014/12/25</link>
-        <guid isPermaLink="true">https://arakawa.asia/2014/12/25</guid>
+        <link>https://valantonini.com/2014/12/25</link>
+        <guid isPermaLink="true">https://valantonini.com/2014/12/25</guid>
       </item>
     
       <item>
         <title>A priority queue in C#</title>
         <description>&lt;p&gt;
-&lt;strong&gt;Update 2&lt;/strong&gt;: I have created a PriorityQueue that only sorts when the indexed value changes &lt;a href=&quot;https://arakawa.asia/2014/12/25&quot; title=&quot;Priority Queue in C# part 2&quot;&gt;here&lt;/a&gt;
+&lt;strong&gt;Update 2&lt;/strong&gt;: I have created a PriorityQueue that only sorts when the indexed value changes &lt;a href=&quot;https://valantonini.com/2014/12/25&quot; title=&quot;Priority Queue in C# part 2&quot;&gt;here&lt;/a&gt;
 &lt;/p&gt;
 
 &lt;p&gt;
@@ -392,14 +392,14 @@ The constructor accepts an optional IComparer&amp;lt;T&amp;gt; to decide how ite
     The big weakness in this solution is it sorts each time you pop so there is a big overhead if you do sequential pops without the sort key ever having changed. The trade off is we don't need to worry about updating the collection each time a sort key is updated. This is handy if the sort key is being tracked and updated regularly from somewhere else.
 &lt;/p&gt;</description>
         <pubDate>Tue, 23 Dec 2014 07:30:00 +1000</pubDate>
-        <link>https://arakawa.asia/2014/12/23</link>
-        <guid isPermaLink="true">https://arakawa.asia/2014/12/23</guid>
+        <link>https://valantonini.com/2014/12/23</link>
+        <guid isPermaLink="true">https://valantonini.com/2014/12/23</guid>
       </item>
     
       <item>
         <title>Graphs and pathing in C# part 2</title>
         <description>&lt;p&gt;
-A while ago &lt;a href=&quot;https://arakawa.asia/2013/08/04&quot; title=&quot;Graphs and pathing in C#&quot; target=&quot;_blank&quot;&gt;I created an implementation of Dijkstra's algorithm&lt;/a&gt; for pathfinding. It turns out there was a bug that meant although it found a path, it wasn't always the shortest. I thought this was a great chance to re-write it and implement some of the performance tips I received.
+A while ago &lt;a href=&quot;https://valantonini.com/2013/08/04&quot; title=&quot;Graphs and pathing in C#&quot; target=&quot;_blank&quot;&gt;I created an implementation of Dijkstra's algorithm&lt;/a&gt; for pathfinding. It turns out there was a bug that meant although it found a path, it wasn't always the shortest. I thought this was a great chance to re-write it and implement some of the performance tips I received.
 &lt;/p&gt;
 
 &lt;p&gt;
@@ -441,8 +441,8 @@ I am currently working on an A* algorithm to use in place of this but I still th
 &lt;/p&gt;
 </description>
         <pubDate>Mon, 22 Dec 2014 07:30:00 +1000</pubDate>
-        <link>https://arakawa.asia/2014/12/22</link>
-        <guid isPermaLink="true">https://arakawa.asia/2014/12/22</guid>
+        <link>https://valantonini.com/2014/12/22</link>
+        <guid isPermaLink="true">https://valantonini.com/2014/12/22</guid>
       </item>
     
       <item>
@@ -538,14 +538,14 @@ A sample program that grabs the description off a property would look like this:
 At the moment the GetPropertyInfo&amp;lt;T1, T&amp;gt;(Expression&amp;lt;Func&amp;lt;T1&amp;gt;&amp;gt; expression, T2 parentClass) method requires the parent class to be passed in but there may be a way to get it from the expression parameter.
 &lt;/p&gt;</description>
         <pubDate>Fri, 14 Nov 2014 07:30:00 +1000</pubDate>
-        <link>https://arakawa.asia/2014/11/14</link>
-        <guid isPermaLink="true">https://arakawa.asia/2014/11/14</guid>
+        <link>https://valantonini.com/2014/11/14</link>
+        <guid isPermaLink="true">https://valantonini.com/2014/11/14</guid>
       </item>
     
       <item>
         <title>valantonini.com</title>
         <description>&lt;a href=&quot;http://valantonini.com&quot; title=&quot;valantonini.com&quot; target=&quot;_blank&quot;&gt;
-    &lt;img src=&quot;https://arakawa.asia/images/posts/2014-07-26-valantonini.com.png&quot; alt=&quot;valantonini.com&quot; /&gt;
+    &lt;img src=&quot;https://valantonini.com/images/posts/2014-07-26-valantonini.com.png&quot; alt=&quot;valantonini.com&quot; /&gt;
 &lt;/a&gt;
 &lt;br /&gt;
 &lt;br /&gt;
@@ -559,8 +559,8 @@ It is just a contact form for now but will have a profile and portfolio in the f
 &lt;a href=&quot;http://valantonini.com&quot; title=&quot;valantonini.com&quot; target=&quot;_blank&quot;&gt;Check it out now&lt;/a&gt;
 &lt;/p&gt;</description>
         <pubDate>Sun, 27 Jul 2014 07:30:00 +1000</pubDate>
-        <link>https://arakawa.asia/2014/07/27</link>
-        <guid isPermaLink="true">https://arakawa.asia/2014/07/27</guid>
+        <link>https://valantonini.com/2014/07/27</link>
+        <guid isPermaLink="true">https://valantonini.com/2014/07/27</guid>
       </item>
     
       <item>
@@ -570,11 +570,11 @@ A chessboard using HTML5 canvas. The number of row/columns is configurable and t
 &lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;a href=&quot;https://arakawa.asia/samples/chessboard/&quot; title=&quot;chessboard&quot; target=&quot;_blank&quot;&gt;
-    &lt;img src=&quot;https://arakawa.asia/images/posts/2014-05-31-chessboard.png&quot; alt=&quot;chessboard&quot; /&gt;
+    &lt;a href=&quot;https://valantonini.com/samples/chessboard/&quot; title=&quot;chessboard&quot; target=&quot;_blank&quot;&gt;
+    &lt;img src=&quot;https://valantonini.com/images/posts/2014-05-31-chessboard.png&quot; alt=&quot;chessboard&quot; /&gt;
     &lt;/a&gt;
     &lt;figcaption style=&quot;text-align: center;&quot;&gt;(click the image to see the example)&lt;/figcaption&gt;
-    &lt;a href=&quot;https://arakawa.asia/samples/chessboard/&quot; title=&quot;chessboard&quot;  target=&quot;_blank&quot;&gt;
+    &lt;a href=&quot;https://valantonini.com/samples/chessboard/&quot; title=&quot;chessboard&quot;  target=&quot;_blank&quot;&gt;
     &lt;/a&gt;
 &lt;/figure&gt;
 
@@ -673,8 +673,8 @@ The markup:
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;chessboard&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;</description>
         <pubDate>Sun, 01 Jun 2014 07:30:00 +1000</pubDate>
-        <link>https://arakawa.asia/2014/06/01</link>
-        <guid isPermaLink="true">https://arakawa.asia/2014/06/01</guid>
+        <link>https://valantonini.com/2014/06/01</link>
+        <guid isPermaLink="true">https://valantonini.com/2014/06/01</guid>
       </item>
     
   </channel>
