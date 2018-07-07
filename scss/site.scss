@@ -44,3 +44,19 @@ header {
 @import "postlist";
 @import "post";
 @import "boostrap-overrides";
+
+.margin-top-25{
+  margin-top: 25px;
+}
+
+.margin-top-15 {
+  margin-top: 15px;
+}
+
+@media print
+{    
+    .no-print, .no-print *
+    {
+        display: none !important;
+    }
+}

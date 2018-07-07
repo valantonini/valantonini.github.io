@@ -203,6 +203,15 @@
     
     
     
+    <url>
+        <loc>https://valantonini.com/services/</loc>
+        <lastmod>2018-07-07T18:30:00+10:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    
+    
     
     
     
@@ -257,6 +266,8 @@
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
+    
+    
     
     
     
