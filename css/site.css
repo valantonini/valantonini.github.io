@@ -6237,5 +6237,8 @@ nav .dropdown-menu {
 @media print {
   .no-print, .no-print * {
     display: none !important; } }
+.resume .label {
+  margin-top: 2px;
+  margin-bottom: 2px; }
 
 /*# sourceMappingURL=site.css.map */
