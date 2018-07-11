@@ -6239,6 +6239,7 @@ nav .dropdown-menu {
     display: none !important; } }
 .resume .label {
   margin-top: 2px;
-  margin-bottom: 2px; }
+  margin-bottom: 2px;
+  display: inline-block; }
 
 /*# sourceMappingURL=site.css.map */
