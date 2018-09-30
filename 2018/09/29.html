@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="A blog about all things programming by val antonini.">
-    <title>Promethean - A procedural dungeon generator in C#</title>
+    <title>Now running on Bootstrap 4</title>
     <link rel="canonical" href="https://valantonini.com/2018/09/29">
 
 
@@ -90,7 +90,7 @@
                         <div class="post">
 
     <header>
-        <h1>Promethean - A procedural dungeon generator in C#</h1>
+        <h1>Now running on Bootstrap 4</h1>
 
         <p class="meta">
             Sep 29, 2018 • val antonini
@@ -99,71 +99,9 @@
 
     <article>
         <p>
-    <img class="img-fluid" src="https://valantonini.com/samples/promethean/promethean_sample.png" title="Promethean procedural dungeon sample">
-</p>
-
-<p>
-    I've gotten a first version of a procedural dungeon generator written in C#. I aim for this to be compatible with
-    the Unity but at the moment
-    it looks like Unity isn't a fan of a List of Lists. You can see the code on <a href="https://github.com/valantonini/Promethean"
-        target="_blank">Github</a>
-    and view some generated floor maps in the browser <a href="https://prometheanapp.azurewebsites.net" target="_blank">here</a>.
-</p>
-<p>
-    The browser rendererjust renders a bunch of coloured tiles on a canvas. Each colour represents a different piece
-    (inside corner, outside corner) and/or a pieces orientation.
-</p>
-
-<p>
-    It works by generating a whole bunch of rooms (rectangles). At first I was going to make sure they didn't overlap
-    but the overlapping rooms
-    meant that not every room was just a boring rectangle.
-</p>
-<p>
-    I then use <a href="https://github.com/valantonini/AStar" target="_blank">my A* implementation</a>
-    to link all the rooms together by ordering the rooms by distance from origin and then drawing a path from room
-    center to room center. I then
-    double the size of everything (so a tile is now represented by 2 x 2 tile of the same type). I then run over the
-    floor tiles and
-    identify what should be walls, corners
-    etc. By doubling the tiles in the previous step, I can ensure there are no room corners that overlap eachother and
-    can limit the number of tile types to the 20 below although you could use a smaller tileset and just rotate them
-    according
-    to their position.
-</p>
-<p>
-    <pre>
-    <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp">    <span class="k">public</span> <span class="k">static</span> <span class="k">class</span> <span class="nc">Tile</span>
-    <span class="p">{</span>
-        <span class="k">public</span> <span class="k">static</span> <span class="kt">byte</span> <span class="n">Empty</span> <span class="p">=&gt;</span> <span class="m">1</span><span class="p">;</span>
-
-        <span class="k">public</span> <span class="k">static</span> <span class="kt">byte</span> <span class="n">Floor</span> <span class="p">=&gt;</span> <span class="m">0</span><span class="p">;</span>
-
-        <span class="k">public</span> <span class="k">static</span> <span class="kt">byte</span> <span class="n">TopLeftInsideCorner</span> <span class="p">=&gt;</span> <span class="m">2</span><span class="p">;</span>
-        <span class="k">public</span> <span class="k">static</span> <span class="kt">byte</span> <span class="n">TopRightInsideCorner</span> <span class="p">=&gt;</span> <span class="m">3</span><span class="p">;</span>
-        <span class="k">public</span> <span class="k">static</span> <span class="kt">byte</span> <span class="n">BottomLeftInsideCorner</span> <span class="p">=&gt;</span> <span class="m">4</span><span class="p">;</span>
-        <span class="k">public</span> <span class="k">static</span> <span class="kt">byte</span> <span class="n">BottomRightInsideCorner</span> <span class="p">=&gt;</span> <span class="m">5</span><span class="p">;</span>
-
-        <span class="k">public</span> <span class="k">static</span> <span class="kt">byte</span> <span class="n">TopWall</span> <span class="p">=&gt;</span> <span class="m">6</span><span class="p">;</span>
-        <span class="k">public</span> <span class="k">static</span> <span class="kt">byte</span> <span class="n">RightWall</span> <span class="p">=&gt;</span> <span class="m">7</span><span class="p">;</span>
-        <span class="k">public</span> <span class="k">static</span> <span class="kt">byte</span> <span class="n">BottomWall</span> <span class="p">=&gt;</span> <span class="m">8</span><span class="p">;</span>
-        <span class="k">public</span> <span class="k">static</span> <span class="kt">byte</span> <span class="n">LeftWall</span> <span class="p">=&gt;</span> <span class="m">9</span><span class="p">;</span>
-
-        <span class="k">public</span> <span class="k">static</span> <span class="kt">byte</span> <span class="n">TopLeftOutsideCorner</span> <span class="p">=&gt;</span> <span class="m">10</span><span class="p">;</span>
-        <span class="k">public</span> <span class="k">static</span> <span class="kt">byte</span> <span class="n">TopRightOutsideCorner</span> <span class="p">=&gt;</span> <span class="m">11</span><span class="p">;</span>
-        <span class="k">public</span> <span class="k">static</span> <span class="kt">byte</span> <span class="n">BottomLeftOutsideCorner</span> <span class="p">=&gt;</span> <span class="m">12</span><span class="p">;</span>
-        <span class="k">public</span> <span class="k">static</span> <span class="kt">byte</span> <span class="n">BottomRightOutsideCorner</span> <span class="p">=&gt;</span> <span class="m">13</span><span class="p">;</span>
-
-        <span class="k">public</span> <span class="k">static</span> <span class="kt">byte</span> <span class="n">TopNub</span> <span class="p">=&gt;</span> <span class="m">14</span><span class="p">;</span>
-        <span class="k">public</span> <span class="k">static</span> <span class="kt">byte</span> <span class="n">RightNub</span> <span class="p">=&gt;</span> <span class="m">15</span><span class="p">;</span>
-        <span class="k">public</span> <span class="k">static</span> <span class="kt">byte</span> <span class="n">BottomNub</span> <span class="p">=&gt;</span> <span class="m">16</span><span class="p">;</span>
-        <span class="k">public</span> <span class="k">static</span> <span class="kt">byte</span> <span class="n">LeftNub</span> <span class="p">=&gt;</span> <span class="m">17</span><span class="p">;</span>
-
-        <span class="k">public</span> <span class="k">static</span> <span class="kt">byte</span> <span class="n">DoubleVerticalWall</span> <span class="p">=&gt;</span> <span class="m">18</span><span class="p">;</span>
-        <span class="k">public</span> <span class="k">static</span> <span class="kt">byte</span> <span class="n">DoubleHorizontalWall</span> <span class="p">=&gt;</span> <span class="m">19</span><span class="p">;</span>
-    <span class="p">}</span>
-    </code></pre></figure>
-    </pre>
+    I wanted to check out upgrading from Bootstrap 3 to Bootstrap 4 so I made this site my test subject. It was a lot
+    easier than going from 2 to 3 and easier than I thought it would be. I also used it as a chance to ditch bower and
+    make the build a gulp pipeline. There are a few colour issues but I'll get to them later.
 </p>
     </article>
 
@@ -173,40 +111,20 @@
 
 
         <span class="tag">
-            <a href="https://valantonini.com/tag/csharp
+            <a href="https://valantonini.com/tag/bootstrap
 
 ">
-    C#
+    Bootstrap
 </a>
         </span>
         
 
 
         <span class="tag">
-            <a href="https://valantonini.com/tag/game%20development
+            <a href="https://valantonini.com/tag/web%20development
 
 ">
-    Game Development
-</a>
-        </span>
-        
-
-
-        <span class="tag">
-            <a href="https://valantonini.com/tag/pathing
-
-">
-    Pathing
-</a>
-        </span>
-        
-
-
-        <span class="tag">
-            <a href="https://valantonini.com/tag/unity3d
-
-">
-    Unity3D
+    Web Development
 </a>
         </span>
         
