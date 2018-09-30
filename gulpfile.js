@@ -1,30 +1,25 @@
 var gulp = require('gulp');
-var sass = require('gulp-sass');
+var bundle = require('gulp-bundle-assets');
+var exec = require('child_process').exec;
+var cb = require('cb');
 var del = require('del');
-var minifyCss = require('gulp-minify-css');
-var sourcemaps = require('gulp-sourcemaps');
-var rename = require('gulp-rename');
 
-
-gulp.task('sass', function () {
-
-    del('./css/*.css');
-
-    gulp.src('./scss/site.scss')
-        .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest('./css'));
+gulp.task('clean', function () {
+    return del('./public/*');
 });
 
-
-gulp.task('minify-css',['sass'], function () {
-
-    return gulp.src('./css/site.css')
-        .pipe(sourcemaps.init())
-        .pipe(minifyCss())
-        .pipe(rename({suffix: '.min'}))
-        .pipe(sourcemaps.write())
-        .pipe(gulp.dest('./css'));
+gulp.task('bundle', ['clean'],function () {
+    return gulp.src('./bundle.config.js')
+        .pipe(bundle())
+        .pipe(gulp.dest('./public'));
 });
 
+gulp.task('build', ['bundle'], function () {
+    exec('jekyll build', function (err, stdout, stderr) {
+        console.log(stdout);
+        console.log(stderr);
+        cb(err);
+    });
+});
 
-gulp.task('default', ['minify-css']);
+gulp.task('default', ['build']);

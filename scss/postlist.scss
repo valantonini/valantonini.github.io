@@ -48,10 +48,14 @@
 
 .all-posts-pagination{
   span {
-    font-size: 10px;
+    font-size: 1rem;
   }
   a {
     font-size: 12px;
+  }
+  .page-count span {
+    margin-left: 10px;
+    margin-right: 10px;
   }
 }
 

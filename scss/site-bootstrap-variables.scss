@@ -10,17 +10,20 @@ $base-border-radius: 0px;
 $base-gray: #eaeaea;
 $base-small-font-size: 12px;
 
+$primary: #000;
+$secondary: #777;
+
 $navbar-default-bg: transparent;
-$navbar-default-link-active-color: #333;
-$navbar-default-link-color: #333;
-$navbar-default-link-hover-color: #333;
+
+$navbar-light-color:                #333;
+$navbar-light-hover-color:         #333;
+$navbar-light-active-color:         #333;
 
 $border-radius-base: $base-border-radius;
 
 $pre-bg: transperant;
 
 $text-color: $base-text;
-$font-size-base:  18px;
 $font-family-base: $font-family-serif;
 $headings-font-weight: 300;
 

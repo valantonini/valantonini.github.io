@@ -1,0 +1,8 @@
+.about {
+    @include media-breakpoint-only(xs)
+    {
+        img.avatar{
+            max-width: 200px;
+        }
+    }
+}

@@ -4,6 +4,24 @@
         xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
     <url>
+        <loc>https://valantonini.com/2018/09/29</loc>
+        
+        <lastmod>2018-09-29T18:30:00+10:00</lastmod>
+        
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    
+    <url>
+        <loc>https://valantonini.com/2018/09/29</loc>
+        
+        <lastmod>2018-09-29T18:30:00+10:00</lastmod>
+        
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    
+    <url>
         <loc>https://valantonini.com/2015/10/28</loc>
         
         <lastmod>2015-10-28T07:30:00+10:00</lastmod>
@@ -203,13 +221,6 @@
     
     
     
-    <url>
-        <loc>https://valantonini.com/services/</loc>
-        <lastmod>2018-07-07T18:30:00+10:00</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    
     
     
     
@@ -226,13 +237,6 @@
     </url>
     
     
-    
-    <url>
-        <loc>https://valantonini.com/search/</loc>
-        <lastmod>2015-01-01T21:30:00+10:00</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
     
     
     
@@ -266,6 +270,10 @@
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
+    
+    
+    
+    
     
     
     
@@ -694,6 +702,16 @@
         <priority>0.5</priority>
     </url>
     
+    
+    <url>
+        <loc>https://valantonini.com/tag/unity3d
+
+</loc>
+        <lastmod>2015-01-01T07:30:00+10:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
 
     
     
@@ -869,6 +887,16 @@
     
     <url>
         <loc>https://valantonini.com/category/data%20structures
+
+</loc>
+        <lastmod>2015-01-01T07:30:00+10:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    
+    <url>
+        <loc>https://valantonini.com/category/unity3d
 
 </loc>
         <lastmod>2015-01-01T07:30:00+10:00</lastmod>

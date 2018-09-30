@@ -3,5 +3,5 @@
 }
 
 .btn-gray {
-  @include button-variant($base-text, $base-gray, $btn-default-border);
+  @include button-variant($base-text, $base-text, $base-gray);
 }

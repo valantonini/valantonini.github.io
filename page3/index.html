@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,81 +8,127 @@
     <meta name="description" content="A blog about all things programming by val antonini.">
     <title>valantonini.com</title>
     <link rel="canonical" href="https://valantonini.com/page3/">
-    <!-- Custom CSS -->
+
 
     <link rel="icon" href="https://valantonini.com/images/favicon.png">
 
-    <!--<script src="https://valantonini.com/bower_components/jquery/dist/jquery.min.js"></script>-->
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script>if (!window.jQuery) {
-    var localjQuery = 'https://valantonini.com/bower_components/jquery/dist/jquery.min.js';
-    var localjQueryScript = '<script src="'+localjQuery+'"><\/script>';
-    document.write(localjQueryScript);
-}
-</script>
+    <link href="https://fonts.googleapis.com/css?family=Merriweather%3A400%2C300%2C300italic%2C400italic%2C700%2C700italic&#038;ver=4.1"
+        rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+
+    <link rel="stylesheet" href="https://valantonini.com/public/main.css">
+    <link rel="stylesheet" href="https://valantonini.com/public/vendor.css">
+
+    <script src="https://valantonini.com/public/vendor.js"></script>
+    <script src="https://valantonini.com/public/main.js"></script>
     <!-- website by valantonini -->
-     <!--Background pattern from subtlepatterns.com -->
+    <!--Background pattern from subtlepatterns.com -->
 </head>
 
 
 <body>
-<div class="arakawa-bg">
-    <div class="container">
-        <nav class="navbar navbar-default navbar-static-top/Users/val/Downloads/paper_fibers/paper_fibers.png">
-    <div class="container">
+    <div class="arakawa-bg">
+        <div class="container">
+            <nav class="navbar navbar-light navbar-expand-md">
+    <a class="navbar-brand" href="https://valantonini.com">
+        <img src="https://valantonini.com/images/logo.png" alt="arakawa icon" class="logo">
+        valantonini.com
+    </a>
 
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
-                    aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="https://valantonini.com">
-                <img src="https://valantonini.com/images/logo.png" alt="arakawa icon" class="logo">
-                valantonini.com
-            </a>
-        </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
 
-        <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                        Blog<span class="caret"></span>
-                    </a>
-                    <ul class="dropdown-menu" role="menu">
-                        <li><a href="https://valantonini.com/posts/" title="all posts">All Posts</a></li>
-                        <li><a href="https://valantonini.com/categories/" title="categories">Categories</a></li>
-                        <li><a href="https://valantonini.com/tags/" title="tags">Tags</a></li>
-                        <li><a href="https://valantonini.com/search/" title="search">Search</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="https://valantonini.com/about" title="about me">About</a>
-                </li>
-                <li>
-                    <a href="https://valantonini.com/resume" title="resume">Resume</a>
-                </li>
-                <li>
-                    <a href="https://valantonini.com/services" title="services">Services</a>
-                </li>
-                <li>
-                    <a href="https://valantonini.com/contact" title="contact me">Contact</a>
-                </li>
-            </ul>
-        </div>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ml-auto">
 
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="blogMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+                    Blog
+                </a>
+                <div class="dropdown-menu" aria-labelledby="blogMenuLink">
+                    <a class="dropdown-item" href="https://valantonini.com/posts/" title="all posts">All Posts</a>
+                    <a class="dropdown-item" href="https://valantonini.com/categories/" title="categories">Categories</a>
+                    <a class="dropdown-item" href="https://valantonini.com/tags/" title="tags">Tags</a>
+                    <a class="dropdown-item" href="https://valantonini.com/search/" title="search">Search</a>
+                </div>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="https://valantonini.com/about" title="about me">About</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="https://valantonini.com/resume" title="resume">Resume</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="https://valantonini.com/services" title="services">Services</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="https://valantonini.com/contact" title="contact me">Contact</a>
+            </li>
+
+        </ul>
     </div>
-</nav>
 
-        <div class="content">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="row">
+</nav>
+            <div class="content">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row">
     <div class="col-md-12">
         <div class="post-list">
 
+            
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="post-info">
+                        Jul 27, 2014
+                    </div>
+                    <div class="post-title">
+                        <a href="https://valantonini.com/2014/07/27" title="Continue Reading valantonini.com">valantonini.com</a>
+                    </div>
+                    <div class="post-continue">
+                        <a href="https://valantonini.com/2014/07/27" title="Continue Reading valantonini.com">continue
+                            reading</a>
+                    </div>
+                    <div class="post-seperator">
+                        <img src="https://valantonini.com/images/logo.png" alt="arakawa icon" class="icon">
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="post-info">
+                        Jun 1, 2014
+                    </div>
+                    <div class="post-title">
+                        <a href="https://valantonini.com/2014/06/01" title="Continue Reading A chessboard using javascript and html5 canvas">A chessboard using javascript and html5 canvas</a>
+                    </div>
+                    <div class="post-continue">
+                        <a href="https://valantonini.com/2014/06/01" title="Continue Reading A chessboard using javascript and html5 canvas">continue
+                            reading</a>
+                    </div>
+                    <div class="post-seperator">
+                        <img src="https://valantonini.com/images/logo.png" alt="arakawa icon" class="icon">
+                    </div>
+                </div>
+
+            </div>
             
             <div class="row">
                 <div class="col-md-12">
@@ -92,7 +139,8 @@
                         <a href="https://valantonini.com/2014/04/17" title="Continue Reading Communication between iFrames with IE8 support">Communication between iFrames with IE8 support</a>
                     </div>
                     <div class="post-continue">
-                        <a href="https://valantonini.com/2014/04/17" title="Continue Reading Communication between iFrames with IE8 support">continue reading</a>
+                        <a href="https://valantonini.com/2014/04/17" title="Continue Reading Communication between iFrames with IE8 support">continue
+                            reading</a>
                     </div>
                     <div class="post-seperator">
                         <img src="https://valantonini.com/images/logo.png" alt="arakawa icon" class="icon">
@@ -110,7 +158,8 @@
                         <a href="https://valantonini.com/2014/04/04" title="Continue Reading A quick WASD controller for Unity3d">A quick WASD controller for Unity3d</a>
                     </div>
                     <div class="post-continue">
-                        <a href="https://valantonini.com/2014/04/04" title="Continue Reading A quick WASD controller for Unity3d">continue reading</a>
+                        <a href="https://valantonini.com/2014/04/04" title="Continue Reading A quick WASD controller for Unity3d">continue
+                            reading</a>
                     </div>
                     <div class="post-seperator">
                         <img src="https://valantonini.com/images/logo.png" alt="arakawa icon" class="icon">
@@ -128,43 +177,8 @@
                         <a href="https://valantonini.com/2014/03/28" title="Continue Reading Setting Up Bundler in ASP.Net MVC">Setting Up Bundler in ASP.Net MVC</a>
                     </div>
                     <div class="post-continue">
-                        <a href="https://valantonini.com/2014/03/28" title="Continue Reading Setting Up Bundler in ASP.Net MVC">continue reading</a>
-                    </div>
-                    <div class="post-seperator">
-                        <img src="https://valantonini.com/images/logo.png" alt="arakawa icon" class="icon">
-                    </div>
-                </div>
-
-            </div>
-            
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="post-info">
-                        Oct 31, 2013
-                    </div>
-                    <div class="post-title">
-                        <a href="https://valantonini.com/2013/10/31" title="Continue Reading Removing a blocked ip from fail2ban on a Linode">Removing a blocked ip from fail2ban on a Linode</a>
-                    </div>
-                    <div class="post-continue">
-                        <a href="https://valantonini.com/2013/10/31" title="Continue Reading Removing a blocked ip from fail2ban on a Linode">continue reading</a>
-                    </div>
-                    <div class="post-seperator">
-                        <img src="https://valantonini.com/images/logo.png" alt="arakawa icon" class="icon">
-                    </div>
-                </div>
-
-            </div>
-            
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="post-info">
-                        Oct 19, 2013
-                    </div>
-                    <div class="post-title">
-                        <a href="https://valantonini.com/2013/10/19" title="Continue Reading Sass up your Css with Sass - Syntactically Awesome Stylesheets">Sass up your Css with Sass - Syntactically Awesome Stylesheets</a>
-                    </div>
-                    <div class="post-continue">
-                        <a href="https://valantonini.com/2013/10/19" title="Continue Reading Sass up your Css with Sass - Syntactically Awesome Stylesheets">continue reading</a>
+                        <a href="https://valantonini.com/2014/03/28" title="Continue Reading Setting Up Bundler in ASP.Net MVC">continue
+                            reading</a>
                     </div>
                     <div class="post-seperator">
                         <img src="https://valantonini.com/images/logo.png" alt="arakawa icon" class="icon">
@@ -180,20 +194,37 @@
 
 <div class="row all-posts-pagination">
     <div class="col-md-12">
+
         <nav>
-            <ul class="pager">
+            <ul class="pagination all-posts-pagination justify-content-center">
+
                 
-                <li><a href="https://valantonini.com/page2">newer</a></li>
+                <li class="page-item">
+                    <a href="https://valantonini.com/page2">
+                        <span class="badge badge-pill badge-primary">newer</span>
+                    </a>
+                </li>
+                
+
+
+                
+                <li class="page-count">
+                    <span>
+                        Page: 3 of 5
+                    </span>
+                </li>
                 
 
                 
-                <span>Page: 3 of 5</span>
+                <li class="page-item">
+                    <a href="https://valantonini.com/page4">
+                        <span class="badge badge-pill badge-primary">
+                            older
+                        </span>
+                    </a>
+                </li>
                 
 
-
-                
-                <li><a href="https://valantonini.com/page4">older</a></li>
-                
             </ul>
         </nav>
 
@@ -203,33 +234,30 @@
     </div>
 
 </div>
-
-
+                    </div>
                 </div>
             </div>
         </div>
+        <footer>
+            <div class="no-print">
+                <a href="https://valantonini.com/feed.xml" title="rss" target="_blank">
+                    <img src="https://valantonini.com/images/rss.png" alt="rss icon" class="icon">
+                </a>
+                <a href="https://valantonini.com" title="home">
+                    <img src="https://valantonini.com/images/logo.png" alt="arakawa icon" class="icon">
+                </a>
+                <a href="https://www.github.com/valantonini" title="github" target="_blank">
+                    <img src="https://valantonini.com/images/github.png" alt="github icon" class="icon">
+                </a>
+            </div>
+        </footer>
     </div>
-    <footer>
-        <div class="no-print">
-    <a href="https://valantonini.com/feed.xml" title="rss" target="_blank">
-        <img src="https://valantonini.com/images/rss.png" alt="rss icon" class="icon">
-    </a>
-    <a href="https://valantonini.com" title="home">
-        <img src="https://valantonini.com/images/logo.png" alt="arakawa icon" class="icon">
-    </a>
-    <a href="https://www.github.com/valantonini" title="github" target="_blank">
-        <img src="https://valantonini.com/images/github.png" alt="github icon" class="icon">
-    </a>
-</div>
-    </footer>
-</div>
-<!--<link rel="stylesheet" href="https://valantonini.com/css/main.css">-->
-<link rel="stylesheet" href="https://valantonini.com/css/site.css">
-<script src="https://valantonini.com/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
-<script src="https://valantonini.com/bower_components/simple-jekyll-search/dest/jekyll-search.js"></script>
-<script src="https://valantonini.com/js/site.js"></script>
+    <!--<link rel="stylesheet" href="https://valantonini.com/css/main.css">-->
 
-<script>
+
+
+    
+    <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
             m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -238,6 +266,7 @@
     ga('create', 'UA-42499658-1', 'auto');
     ga('send', 'pageview');
 </script>
-
+    
 </body>
+
 </html>

@@ -1,17 +1,17 @@
-$(function(){
-    //whiteoutCodeBackgroundOnHover();
+$(function () {
+    hljs.initHighlightingOnLoad();
 });
 
 
-function whiteoutCodeBackgroundOnHover(){
-    $('pre code').each(function(){
+function whiteoutCodeBackgroundOnHover() {
+    $.when($.ready).then('pre code').each(function () {
         var parentPre = $(this).parent('pre');
 
         parentPre.hover(
-            function(){
+            function () {
                 $(this).css('background-color', '#ffffff');
             },
-            function(){
+            function () {
                 $(this).css('background-color', 'transparent');
             })
 

@@ -1,12 +1,15 @@
 //@import url('https://fonts.googleapis.com/css?family=Merriweather');
-@import url('https://fonts.googleapis.com/css?family=Merriweather%3A400%2C300%2C300italic%2C400italic%2C700%2C700italic&#038;ver=4.1');
+//@import url('https://fonts.googleapis.com/css?family=Merriweather%3A400%2C300%2C300italic%2C400italic%2C700%2C700italic&#038;ver=4.1');
 @import "site-bootstrap-variables";
-@import "../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap";
+@import "node_modules/bootstrap/scss/bootstrap";
 @import "code-highlight";
 @import "site-bootstrap-extensions";
 @import "full-height";
 @import "search";
 @import "tag-cloud";
+@import "about";
+
+
 
 body {
   background: url('../images/paper_fibers.png') repeat;
@@ -20,7 +23,6 @@ header {
 }
 
 .arakawa-bg {
-  //background: url("../images/arakawawatermark.png") no-repeat fixed center top transparent !important; //this gets covered by viewport
   background: url("../images/arakawawatermark.png") repeat-y scroll center top transparent;
 }
 
@@ -39,19 +41,17 @@ header {
   }
 }
 
+.content  {
+  margin-top: 20px;
+  a {
+    text-decoration: underline;
+  }
+}
 
 @import "nav";
 @import "postlist";
 @import "post";
-@import "boostrap-overrides";
-
-.margin-top-25{
-  margin-top: 25px;
-}
-
-.margin-top-15 {
-  margin-top: 15px;
-}
+@import "resume";
 
 @media print
 {    
@@ -61,8 +61,6 @@ header {
     }
 }
 
-.resume .label {
-  margin-top: 2px;
-  margin-bottom: 2px;
-  display: inline-block;
+.highlight {
+  border: 1px solid $base-gray;
 }
