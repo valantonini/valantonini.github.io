@@ -1,8 +1,18 @@
 .about {
-    @include media-breakpoint-only(xs)
-    {
-        img.avatar{
+
+    .avatar-wrap{
+        @extend .text-center;
+    }
+
+    .avatar-wrap img {
+        @extend .img-fluid;
+        @extend .rounded;
+
+        @include media-breakpoint-only(xs)
+        {
             max-width: 200px;
         }
     }
+
+    
 }

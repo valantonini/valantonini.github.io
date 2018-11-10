@@ -10,7 +10,7 @@
 
   .post-info {
     @extend .text-center;
-    font-size: 10px;
+    font-size: $base-small-font-size;
   }
 
   .post-link {
@@ -50,12 +50,8 @@
   span {
     font-size: 1rem;
   }
-  a {
-    font-size: 12px;
-  }
   .page-count span {
-    margin-left: 10px;
-    margin-right: 10px;
+    margin: auto 10px;
   }
 }
 
@@ -64,7 +60,8 @@
   margin-bottom: 20px;
 
   a {
-    font-size: 10px;
+    font-size: $base-small-font-size;
     color: $text-color;
   }
+
 }
