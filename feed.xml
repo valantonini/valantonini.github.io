@@ -1,1 +1,411 @@
-<?xml version="1.0" encoding="utf-8" ?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>valantonini.com</title><description>val antonini - brisbane based software developer</description><link>http://valantonini.com</link><atom:link href="http://valantonini.com" rel="self" type="application/rss+xml"></atom:link><item><title>How to tell if a transform is facing another in Unity3d</title><description></description><pubdate>Mon Jun 10 2013 10:00:00 GMT+1000 (Australian Eastern Standard Time)</pubdate><link>http://valantonini.com/2013/06/10/</link><guid isPermaLink="true">http://valantonini.com/2013/06/10/</guid></item><item><title>Graphs and pathing in C#</title><description></description><pubdate>Sat Aug 03 2013 10:00:00 GMT+1000 (Australian Eastern Standard Time)</pubdate><link>http://valantonini.com/2013/08/03/</link><guid isPermaLink="true">http://valantonini.com/2013/08/03/</guid></item><item><title>Removing a blocked ip from fail2ban on a Linode</title><description></description><pubdate>Wed Oct 30 2013 10:00:00 GMT+1000 (Australian Eastern Standard Time)</pubdate><link>http://valantonini.com/2013/10/30/</link><guid isPermaLink="true">http://valantonini.com/2013/10/30/</guid></item><item><title>A quick WASD controller for Unity3d</title><description></description><pubdate>Thu Apr 03 2014 10:00:00 GMT+1000 (Australian Eastern Standard Time)</pubdate><link>http://valantonini.com/2014/04/03/</link><guid isPermaLink="true">http://valantonini.com/2014/04/03/</guid></item><item><title>Graphs and pathing in C# part 2</title><description></description><pubdate>Sun Dec 21 2014 10:00:00 GMT+1000 (Australian Eastern Standard Time)</pubdate><link>http://valantonini.com/2014/12/21/</link><guid isPermaLink="true">http://valantonini.com/2014/12/21/</guid></item><item><title>A priority queue in C#</title><description></description><pubdate>Mon Dec 22 2014 10:00:00 GMT+1000 (Australian Eastern Standard Time)</pubdate><link>http://valantonini.com/2014/12/22/</link><guid isPermaLink="true">http://valantonini.com/2014/12/22/</guid></item><item><title>A priority queue in C# - part 2</title><description></description><pubdate>Wed Dec 24 2014 10:00:00 GMT+1000 (Australian Eastern Standard Time)</pubdate><link>http://valantonini.com/2014/12/24/</link><guid isPermaLink="true">http://valantonini.com/2014/12/24/</guid></item><item><title>A* algorithm in C#</title><description></description><pubdate>Sat Jul 11 2015 10:00:00 GMT+1000 (Australian Eastern Standard Time)</pubdate><link>http://valantonini.com/2015/07/11/</link><guid isPermaLink="true">http://valantonini.com/2015/07/11/</guid></item><item><title>DbUp Serilog Upgrade Log</title><description></description><pubdate>Tue Oct 27 2015 10:00:00 GMT+1000 (Australian Eastern Standard Time)</pubdate><link>http://valantonini.com/2015/10/27/</link><guid isPermaLink="true">http://valantonini.com/2015/10/27/</guid></item><item><title>Promethean - A procedural dungeon generator in C#</title><description></description><pubdate>Sun Sep 30 2018 10:00:00 GMT+1000 (Australian Eastern Standard Time)</pubdate><link>http://valantonini.com/2018/09/30/</link><guid isPermaLink="true">http://valantonini.com/2018/09/30/</guid></item><item><title>Site rewrite</title><description></description><pubdate>Mon Apr 29 2019 10:00:00 GMT+1000 (Australian Eastern Standard Time)</pubdate><link>http://valantonini.com/2019/04/29/</link><guid isPermaLink="true">http://valantonini.com/2019/04/29/</guid></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" ?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>valantonini.com</title><description>val antonini - brisbane based software developer</description><link>http://valantonini.com</link><atom:link href="http://valantonini.com" rel="self" type="application/rss+xml"></atom:link><item><title>Site rewrite</title><description>&lt;p&gt;I moved this blog away from wordpress in 2014 and decided to write it using &lt;a href=&quot;https://jekyllrb.com&quot; title=&quot;Jekyll&quot;&gt;Jekyll&lt;/a&gt;. At the time I really was fascinated by Ruby and wanted to learn it and it seemed like a great opportunity. I was also unhappy with the responsive wordpress themes at the&lt;span class=&quot;widont&quot;&gt;&amp;nbsp;&lt;/span&gt;time.&lt;/p&gt;
+&lt;p&gt;I’ve been working almost exclusively in Javascript and Typescript the last 6 months and have really enjoyed it. I decided to rewrite the blog in &lt;a href=&quot;http://wintersmith.io&quot; title=&quot;Wintersmith&quot;&gt;Wintersmith&lt;/a&gt; as it seemed like easier to maintain and I feel ok open sourcing it as it’s not a bunch of barely functioning, badly written Ruby and spaghetti&lt;span class=&quot;widont&quot;&gt;&amp;nbsp;&lt;/span&gt;css.&lt;/p&gt;
+&lt;p&gt;I still love my initial design I came up with in 2014 and used more or less the same design. It’s also been 6 months since I’ve used JQuery for web development so I opted for a custom compiled &lt;a href=&quot;https://bulma.io&quot; title=&quot;Bulma&quot;&gt;Bulma&lt;/a&gt; instead of Bootstrap as I didn’t want any JQuery dependencies. I initially started out using &lt;a href=&quot;https://picturepan2.github.io/spectre/&quot; title=&quot;Spectre&quot;&gt;Spectre&lt;/a&gt; but found some of the things I really liked such as off canvas was marked as experimental and not quite working how I&lt;span class=&quot;widont&quot;&gt;&amp;nbsp;&lt;/span&gt;intended.&lt;/p&gt;
+&lt;p&gt;The final setup&lt;span class=&quot;widont&quot;&gt;&amp;nbsp;&lt;/span&gt;is:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://wintersmith.io&quot; title=&quot;Wintersmith&quot;&gt;Wintersmith&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://bulma.io&quot; title=&quot;Bulma&quot;&gt;Bulma&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://sass-lang.com&quot; title=&quot;Sass&quot;&gt;Sass&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://pugjs.org/&quot; title=&quot;PugJS&quot;&gt;PugJS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/christian-fei/Simple-Jekyll-Search&quot; title=&quot;Jekyll simple search&quot;&gt;Jekyll simple search&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.typescriptlang.org&quot; title=&quot;Typescript&quot;&gt;Typescript&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://highlightjs.org/&quot; title=&quot;highlightjs&quot;&gt;Highlightjs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://gulpjs.com&quot; title=&quot;Gulp&quot;&gt;Gulp&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Markdown for content&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/FullHuman/purgecss&quot; title=&quot;purgecss&quot;&gt;PurgeCss&lt;/a&gt; is used to trim down all the excess and deliver a front page around ~100kB, 85kb of which are images and&lt;span class=&quot;widont&quot;&gt;&amp;nbsp;&lt;/span&gt;fonts.&lt;/p&gt;
+&lt;p&gt;Source code can be found &lt;a href=&quot;https://github.com/valantonini/arakawa&quot; title=&quot;github/valantonini/arakawa&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+</description><pubdate>Mon Apr 29 2019 10:00:00 GMT+1000 (Australian Eastern Standard Time)</pubdate><link>http://valantonini.com/2019/04/29/</link><guid isPermaLink="true">http://valantonini.com/2019/04/29/</guid></item><item><title>Promethean - A procedural dungeon generator in C#</title><description>&lt;p&gt;&lt;img src=&quot;/images/posts/20180930/sample.png&quot; alt=&quot;Promethean procedural dungeon sample&quot; title=&quot;Promethean procedural dungeon sample&quot;&gt;&lt;/p&gt;
+&lt;p&gt;I’ve gotten a first version of a procedural dungeon generator written in C#. I aim for this to be compatible with
+the Unity but at the moment it looks like Unity isn’t a fan of a List of Lists. You can see the code on 
+&lt;a href=&quot;https://github.com/valantonini/Promethean&quot; title=&quot;Promethean on Github&quot;&gt;Github&lt;/a&gt; and view some generated floor maps in the browser 
+&lt;a href=&quot;https://prometheanapp.azurewebsites.net&quot; title=&quot;Promethean online sample&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The browser rendererjust renders a bunch of coloured tiles on a canvas. Each colour represents a different piece
+(inside corner, outside corner) and/or a pieces&lt;span class=&quot;widont&quot;&gt;&amp;nbsp;&lt;/span&gt;orientation.&lt;/p&gt;
+&lt;p&gt;It works by generating a whole bunch of rooms (rectangles). At first I was going to make sure they didn’t overlap
+but the overlapping rooms meant that not every room was just a boring&lt;span class=&quot;widont&quot;&gt;&amp;nbsp;&lt;/span&gt;rectangle.&lt;/p&gt;
+&lt;p&gt;I then use &lt;a href=&quot;https://github.com/valantonini/AStar&quot; title=&quot;Val Antonini A* implementation&quot;&gt;my A* implementation&lt;/a&gt; to link all the rooms together by 
+ordering the rooms by distance from origin and then drawing a path from room center to room center. I then
+double the size of everything (so a tile is now represented by 2 x 2 tile of the same type). I then run over the
+floor tiles and identify what should be walls, corners etc. By doubling the tiles in the previous step, I can 
+ensure there are no room corners that overlap eachother and can limit the number of tile types to the 20 below 
+although you could use a smaller tileset and just rotate them according to their&lt;span class=&quot;widont&quot;&gt;&amp;nbsp;&lt;/span&gt;position.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-cs&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Tile&lt;/span&gt;
+{
+    &lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;byte&lt;/span&gt; Empty =&amp;gt; &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;;
+
+    &lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;byte&lt;/span&gt; Floor =&amp;gt; &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;
+
+    &lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;byte&lt;/span&gt; TopLeftInsideCorner =&amp;gt; &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;;
+    &lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;byte&lt;/span&gt; TopRightInsideCorner =&amp;gt; &lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;;
+    &lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;byte&lt;/span&gt; BottomLeftInsideCorner =&amp;gt; &lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;;
+    &lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;byte&lt;/span&gt; BottomRightInsideCorner =&amp;gt; &lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;;
+
+    &lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;byte&lt;/span&gt; TopWall =&amp;gt; &lt;span class=&quot;number&quot;&gt;6&lt;/span&gt;;
+    &lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;byte&lt;/span&gt; RightWall =&amp;gt; &lt;span class=&quot;number&quot;&gt;7&lt;/span&gt;;
+    &lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;byte&lt;/span&gt; BottomWall =&amp;gt; &lt;span class=&quot;number&quot;&gt;8&lt;/span&gt;;
+    &lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;byte&lt;/span&gt; LeftWall =&amp;gt; &lt;span class=&quot;number&quot;&gt;9&lt;/span&gt;;
+
+    &lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;byte&lt;/span&gt; TopLeftOutsideCorner =&amp;gt; &lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;;
+    &lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;byte&lt;/span&gt; TopRightOutsideCorner =&amp;gt; &lt;span class=&quot;number&quot;&gt;11&lt;/span&gt;;
+    &lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;byte&lt;/span&gt; BottomLeftOutsideCorner =&amp;gt; &lt;span class=&quot;number&quot;&gt;12&lt;/span&gt;;
+    &lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;byte&lt;/span&gt; BottomRightOutsideCorner =&amp;gt; &lt;span class=&quot;number&quot;&gt;13&lt;/span&gt;;
+
+    &lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;byte&lt;/span&gt; TopNub =&amp;gt; &lt;span class=&quot;number&quot;&gt;14&lt;/span&gt;;
+    &lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;byte&lt;/span&gt; RightNub =&amp;gt; &lt;span class=&quot;number&quot;&gt;15&lt;/span&gt;;
+    &lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;byte&lt;/span&gt; BottomNub =&amp;gt; &lt;span class=&quot;number&quot;&gt;16&lt;/span&gt;;
+    &lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;byte&lt;/span&gt; LeftNub =&amp;gt; &lt;span class=&quot;number&quot;&gt;17&lt;/span&gt;;
+
+    &lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;byte&lt;/span&gt; DoubleVerticalWall =&amp;gt; &lt;span class=&quot;number&quot;&gt;18&lt;/span&gt;;
+    &lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;byte&lt;/span&gt; DoubleHorizontalWall =&amp;gt; &lt;span class=&quot;number&quot;&gt;19&lt;/span&gt;;
+}&lt;/code&gt;&lt;/pre&gt;
+</description><pubdate>Sun Sep 30 2018 10:00:00 GMT+1000 (Australian Eastern Standard Time)</pubdate><link>http://valantonini.com/2018/09/30/</link><guid isPermaLink="true">http://valantonini.com/2018/09/30/</guid></item><item><title>DbUp Serilog Upgrade Log</title><description>&lt;p&gt;A DbUp Upgrade Log that logs to serilog. You can view the project at &lt;a href=&quot;https://github.com/valantonini/DbUp.SerilogUpgradeLog&quot; title=&quot;DBUp Serilog Upgrade Logger - Github&quot;&gt;https://github.com/valantonini/DbUp.SerilogUpgradeLog&lt;/a&gt; or install &lt;a href=&quot;https://www.nuget.org/packages/DbUp.SerilogUpgradeLogger&quot; title=&quot;DBUp Serilog Upgrade Logger - Nuget&quot;&gt;via&lt;span class=&quot;widont&quot;&gt;&amp;nbsp;&lt;/span&gt;nuget&lt;/a&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;Install-Package DbUp.SerilogUpgradeLogger&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Usage:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-cs&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; upgrader = DeployChanges.To
+                            .SqlDatabase(&lt;span class=&quot;string&quot;&gt;&quot;&quot;&lt;/span&gt;)
+                            .WithScriptsEmbeddedInAssembly(Assembly.GetExecutingAssembly())
+                            .LogToConsole()
+                            .LogToSerilog() &lt;span class=&quot;comment&quot;&gt;//add this line&lt;/span&gt;
+                            .Build();
+&lt;/code&gt;&lt;/pre&gt;
+</description><pubdate>Tue Oct 27 2015 10:00:00 GMT+1000 (Australian Eastern Standard Time)</pubdate><link>http://valantonini.com/2015/10/27/</link><guid isPermaLink="true">http://valantonini.com/2015/10/27/</guid></item><item><title>A* algorithm in C#</title><description>&lt;p&gt;An A* algorithm in C#. Original credit goes to Gustavo Franko and his post on &lt;a href=&quot;http://www.codeguru.com/csharp/csharp/cs_misc/designtechniques/article.php/c12527/AStar-A-Implementation-in-C-Path-Finding-PathFinder.htm&quot; title=&quot;A* implementation on code guru&quot;&gt;code guru&lt;/a&gt;. With his permission I’ve pulled out the A* algorithm from the sample app, updated some of the code to use some newer c# features, added some tests to demonstrate usage and uploaded it to github. You can view the project at &lt;a href=&quot;https://github.com/valantonini/AStar&quot; title=&quot;https://github.com/valantonini/AStar&quot;&gt;https://github.com/valantonini/AStar&lt;/a&gt;. The algorithm contains a variety options such as whether it uses&lt;span class=&quot;widont&quot;&gt;&amp;nbsp;&lt;/span&gt;diagonals.&lt;/p&gt;
+&lt;p&gt;The grid is represented as a byte array with an open position represented as a 1 and a
+blocked position represented as a 0. You can set up a path from a string using the following (where O is open and X is&lt;span class=&quot;widont&quot;&gt;&amp;nbsp;&lt;/span&gt;blocked):&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-cs&quot;&gt;
+&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; level =   &lt;span class=&quot;string&quot;&gt;@&quot;&lt;span class=&quot;caps&quot;&gt;XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX&lt;/span&gt;
+                &lt;span class=&quot;caps&quot;&gt;XOOOXXXXOOOOOOOOOOOOOOOOOOOOOOOX&lt;/span&gt;
+                &lt;span class=&quot;caps&quot;&gt;XOOOXXXXOOOOOOOOOOOOOOOOOOOOOOOX&lt;/span&gt;
+                &lt;span class=&quot;caps&quot;&gt;XOOOXXXXOOOOOOOOOOOOOOOOOOOOOOOX&lt;/span&gt;
+                &lt;span class=&quot;caps&quot;&gt;XOOOXXXXOOOOOOOOOOOOOOOOOOOOOOOX&lt;/span&gt;
+                &lt;span class=&quot;caps&quot;&gt;XOOOXXXXOOOOOOOOOOOOOOOOOOOOOOOX&lt;/span&gt;
+                &lt;span class=&quot;caps&quot;&gt;XOOOXXXXOOOOOOOOOOOOOOOOOOOOOOOX&lt;/span&gt;
+                &lt;span class=&quot;caps&quot;&gt;XOOOXXXXOOOOOOOOOOOOOOOOOOOOOOOX&lt;/span&gt;
+                &lt;span class=&quot;caps&quot;&gt;XOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOX&lt;/span&gt;
+                &lt;span class=&quot;caps&quot;&gt;XOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOX&lt;/span&gt;
+                &lt;span class=&quot;caps&quot;&gt;XOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOX&lt;/span&gt;
+                &lt;span class=&quot;caps&quot;&gt;XXXXXXXXXXXXXXXXXXXXXXOOOOOOOOOX&lt;/span&gt;
+                &lt;span class=&quot;caps&quot;&gt;XXXXXXXXXXXXXXXXXXXXXXOOOOOOOOOX&lt;/span&gt;
+                &lt;span class=&quot;caps&quot;&gt;XXXXXXXXXXXXXXXXXXXXXXOOOOOOOOOX&lt;/span&gt;
+                &lt;span class=&quot;caps&quot;&gt;XOOOOOOOOOOOOOOOOXXXXXOOOOOOOOOX&lt;/span&gt;
+                &lt;span class=&quot;caps&quot;&gt;XOOOOOOOOOOOOOOOOXXXXXOOOOOOOOOX&lt;/span&gt;
+                &lt;span class=&quot;caps&quot;&gt;XOOOOOOOOOOOOOOOOXXXXXOOOOOOOOOX&lt;/span&gt;
+                &lt;span class=&quot;caps&quot;&gt;XOOOOOOOOOOOOOOOOXXXXXOOOOOOOOOX&lt;/span&gt;
+                &lt;span class=&quot;caps&quot;&gt;XOOOOOOOOOOOOOOOOXXXXXOOOOOOOOOX&lt;/span&gt;
+                &lt;span class=&quot;caps&quot;&gt;XOOOOOOOOOOOOOOOOXXXXXOOOOOOOOOX&lt;/span&gt;
+                &lt;span class=&quot;caps&quot;&gt;XOOOOOOOOOOOOOOOOXXXXXOOOOOOOOOX&lt;/span&gt;
+                &lt;span class=&quot;caps&quot;&gt;XOOOOOOOOOOOOOOOOXXXXXOOOOOOOOOX&lt;/span&gt;
+                &lt;span class=&quot;caps&quot;&gt;XOOOOOOOOOOOOOOOOXXXXXOOOOOOOOOX&lt;/span&gt;
+                &lt;span class=&quot;caps&quot;&gt;XOOOOOOOOOOOOOOOOXXXXXOOOOOOOOOX&lt;/span&gt;
+                &lt;span class=&quot;caps&quot;&gt;XOOOOOOOOOOOOOOOOXXXXXOOOOOOOOOX&lt;/span&gt;
+                &lt;span class=&quot;caps&quot;&gt;XOOOOOOOOOOOOOOOOXXXXXOOOOOOOOOX&lt;/span&gt;
+                &lt;span class=&quot;caps&quot;&gt;XOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOX&lt;/span&gt;
+                &lt;span class=&quot;caps&quot;&gt;XOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOX&lt;/span&gt;
+                &lt;span class=&quot;caps&quot;&gt;XOOOOOOXXXXXXXXXXXXXXXXXXXXXXXXX&lt;/span&gt;
+                &lt;span class=&quot;caps&quot;&gt;XOOOOOOXXXXXXXXXXXXXXXXXXXXXXXXX&lt;/span&gt;
+                &lt;span class=&quot;caps&quot;&gt;XOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOX&lt;/span&gt;
+                &lt;span class=&quot;caps&quot;&gt;XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX&lt;/span&gt;&quot;&lt;/span&gt;;
+
+_grid = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;byte&lt;/span&gt;[&lt;span class=&quot;number&quot;&gt;32&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;32&lt;/span&gt;];
+&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; splitLevel = level.Split(&lt;span class=&quot;string&quot;&gt;'\n'&lt;/span&gt;)
+                    .Select(x =&amp;gt; x.Trim())
+                    .ToList();
+
+&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; x = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; x &amp;lt; splitLevel.Count; x++)
+{
+    &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; y = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; y &amp;lt; splitLevel[x].Length; y++)
+    {
+        &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (splitLevel[x][y] != &lt;span class=&quot;string&quot;&gt;'X'&lt;/span&gt;)
+        {
+            _grid[x, y] = &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;;
+        }
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description><pubdate>Sat Jul 11 2015 10:00:00 GMT+1000 (Australian Eastern Standard Time)</pubdate><link>http://valantonini.com/2015/07/11/</link><guid isPermaLink="true">http://valantonini.com/2015/07/11/</guid></item><item><title>A priority queue in C# - part 2</title><description>&lt;p&gt;In &lt;a href=&quot;/2014/12/22&quot; title=&quot;Priority Queue in C#&quot;&gt;my last post&lt;/a&gt; I had created a simple priority queue. Unfortunately it would sort itself each time an item is popped/dequeued. I have created &lt;a href=&quot;https://github.com/valantonini/PriorityQueue&quot; title=&quot;valantonini/PriorityQueue&quot;&gt;a better priority queue that only sorts itself when the indexed value is&lt;span class=&quot;widont&quot;&gt;&amp;nbsp;&lt;/span&gt;changed&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I do this by having items implement the provided IPrioritizable interface. I was initially going to build it on the &lt;a href=&quot;http://msdn.microsoft.com/en-us/library/system.componentmodel.inotifypropertychanged(v=vs.110).aspx&quot; title=&quot;MSDN INotifyPropertyChanged Interface&quot;&gt;INotifyPropertyChanged interface&lt;/a&gt; but I thought this solution was simpler. The interface has 2 methods to Add/Remove an Action that notifies the PriorityQueue that it needs to be sorted. It now also requires a IComparer be provided. An example of this would&lt;span class=&quot;widont&quot;&gt;&amp;nbsp;&lt;/span&gt;be:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-cs&quot;&gt;using System;
+using System.Collections.Generic;
+
+namespace PriorityQueueCollection.Tests
+{
+    public class PrioritizableItem : IPrioritizable
+    {
+        private Action _indexUpdated;
+        private int _value;
+
+        public int Value
+        {
+            get { return _value; }
+            set
+            {
+                _indexUpdated();
+                _value = value;
+            }
+        }
+
+        public PrioritizableItem(int value)
+        {
+            _indexUpdated = () =&amp;gt; { };
+            Value = value;
+        }
+
+        public void AddIndexUpdatedAction(Action indexUpdated)
+        {
+            _indexUpdated = indexUpdated;
+        }
+
+        public void RemoveIndexUpdatedAction()
+        {
+            _indexUpdated = () =&amp;gt; { };
+        }
+    }
+
+    public class ComparePrioritizableItem : IComparer&amp;lt;PrioritizableItem&amp;gt;
+    {
+        public int Compare(PrioritizableItem x, PrioritizableItem y)
+        {
+            if (x.Value &amp;gt; y.Value)
+            {
+                return 1;
+            }
+
+            if (x.Value &amp;lt; y.Value)
+            {
+                return -1;
+            }
+
+            return 0;
+        }
+    }
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Whilst not as simple as it’s predecessor it wastes less time ordering the queue on sequential&lt;span class=&quot;widont&quot;&gt;&amp;nbsp;&lt;/span&gt;pops.&lt;/p&gt;
+</description><pubdate>Wed Dec 24 2014 10:00:00 GMT+1000 (Australian Eastern Standard Time)</pubdate><link>http://valantonini.com/2014/12/24/</link><guid isPermaLink="true">http://valantonini.com/2014/12/24/</guid></item><item><title>A priority queue in C#</title><description>&lt;p&gt;&lt;em&gt;Update 2&lt;/em&gt;: I have created a PriorityQueue that only sorts when the indexed value changes &lt;a href=&quot;/2014/12/24&quot; title=&quot;Priority Queue in C# part 2&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Update&lt;/em&gt;: I will be creating a new version of this that determines whether sorting is actually required before sorting (i.e. whether any of the sort keys have&lt;span class=&quot;widont&quot;&gt;&amp;nbsp;&lt;/span&gt;changed).&lt;/p&gt;
+&lt;p&gt;I was looking for a priority queue in C# for some pathing algorithms. The built in SortedDictionary doesn’t allow duplicate keys and I wanted a collection that didn’t require me to remove and re-add an item to update it. There were a lot of good solutions on the internet but I think I came up with a really simple and clever&lt;span class=&quot;widont&quot;&gt;&amp;nbsp;&lt;/span&gt;implementation.&lt;/p&gt;
+&lt;p&gt;I realised, for me, the only time I access an item is by popping/dequeueing it so I only really need to sort the collection immediately before popping it. Doing it this way means I don’t need to worry about inserting an item at the correct point or updating the collection when the values inside it change. I checked to see &lt;a href=&quot;http://msdn.microsoft.com/en-us/library/b0zbh7b6(v=vs.110).aspx&quot; title=&quot;List&amp;lt;T&amp;gt;.Sort Method&quot;&gt;what algorithm a List(T).Sort uses on &lt;span class=&quot;caps&quot;&gt;MSDN&lt;/span&gt;&lt;/a&gt; and was really happy to find the&lt;span class=&quot;widont&quot;&gt;&amp;nbsp;&lt;/span&gt;following:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This method uses the Array.Sort method, which applies the introspective sort as&lt;span class=&quot;widont&quot;&gt;&amp;nbsp;&lt;/span&gt;follows:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;If the partition size is fewer than 16 elements, it uses an insertion sort&lt;span class=&quot;widont&quot;&gt;&amp;nbsp;&lt;/span&gt;algorithm.&lt;/li&gt;
+&lt;li&gt;If the number of partitions exceeds 2 * LogN, where N is the range of the input array, it uses a Heapsort&lt;span class=&quot;widont&quot;&gt;&amp;nbsp;&lt;/span&gt;algorithm.&lt;/li&gt;
+&lt;li&gt;Otherwise, it uses a Quicksort algorithm.
+This implementation performs an unstable sort; that is, if two elements are equal, their order might not be preserved. In  ontrast, a stable sort preserves the order of elements that are equal. On average, this method is an O(n log n) operation, where n is Count; in the worst case it is an O(n ^ 2)&lt;span class=&quot;widont&quot;&gt;&amp;nbsp;&lt;/span&gt;operation.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The constructor accepts an optional IComparer&lt;T&gt; to decide how items are&lt;span class=&quot;widont&quot;&gt;&amp;nbsp;&lt;/span&gt;compared.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-cs&quot;&gt;using System.Collections.Generic;
+
+namespace valantonini
+{
+    public interface IPriorityQueue&amp;lt;T&amp;gt;
+    {
+        void Push(T item);
+        T Pop();
+        bool Contains(T item);
+    }
+
+    public class PriorityQueue&amp;lt;T&amp;gt; : IPriorityQueue&amp;lt;T&amp;gt;
+    {
+        private readonly List&amp;lt;T&amp;gt; _innerList = new List&amp;lt;T&amp;gt;();
+        private readonly IComparer&amp;lt;T&amp;gt; _comparer;
+
+        public int Count
+        {
+            get { return _innerList.Count; }
+        }
+
+        public PriorityQueue(IComparer&amp;lt;T&amp;gt; comparer = null)
+        {
+            _comparer = comparer ?? Comparer&amp;lt;T&amp;gt;.Default;
+        }
+
+        public void Push(T item)
+        {
+            _innerList.Add(item);
+        }
+
+        public T Pop()
+        {
+            if (_innerList.Count &amp;lt;= 0)
+            {
+                return default(T);
+            }
+
+            Sort();
+            var item = _innerList[0];
+            _innerList.RemoveAt(0);
+            return item;
+        }
+
+        public bool Contains(T item)
+        {
+            return _innerList.Contains(item);
+        }
+
+        private void Sort()
+        {
+            _innerList.Sort(_comparer);
+        }
+    }
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The big weakness in this solution is it sorts each time you pop so there is a big overhead if you do sequential pops without the sort key ever having changed. The trade off is we don’t need to worry about updating the collection each time a sort key is updated. This is handy if the sort key is being tracked and updated regularly from somewhere&lt;span class=&quot;widont&quot;&gt;&amp;nbsp;&lt;/span&gt;else.&lt;/p&gt;
+</description><pubdate>Mon Dec 22 2014 10:00:00 GMT+1000 (Australian Eastern Standard Time)</pubdate><link>http://valantonini.com/2014/12/22/</link><guid isPermaLink="true">http://valantonini.com/2014/12/22/</guid></item><item><title>Graphs and pathing in C# part 2</title><description>&lt;p&gt;A while ago &lt;a href=&quot;/2013/08/03&quot; title=&quot;Graphs and pathing in C#&quot;&gt;I created an implementation of Dijkstra’s algorithm&lt;/a&gt; for pathfinding. It turns out there was a bug that meant although it found a path, it wasn’t always the shortest. I thought this was a great chance to re-write it and implement some of the performance tips I&lt;span class=&quot;widont&quot;&gt;&amp;nbsp;&lt;/span&gt;received.&lt;/p&gt;
+&lt;p&gt;The project can be found on Github &lt;a href=&quot;https://github.com/valantonini/GraphCollection&quot; title=&quot;Github - valantonini/GraphCollection&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The usage has been greatly simplified. You can graph &lt;a href=&quot;http://en.wikipedia.org/wiki/Dijkstra%27s_algorithm&quot; title=&quot;Wikipedia - Dijkstra&amp;#39;s algorithm&quot;&gt;the example on the wikipedia page&lt;/a&gt; like&lt;span class=&quot;widont&quot;&gt;&amp;nbsp;&lt;/span&gt;this:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-cs&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; one = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; GraphNode&amp;lt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt;&amp;gt;(&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;);
+&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; two = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; GraphNode&amp;lt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt;&amp;gt;(&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;);
+&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; three = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; GraphNode&amp;lt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt;&amp;gt;(&lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;);
+&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; four = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; GraphNode&amp;lt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt;&amp;gt;(&lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;);
+&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; five = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; GraphNode&amp;lt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt;&amp;gt;(&lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;);
+&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; six = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; GraphNode&amp;lt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt;&amp;gt;(&lt;span class=&quot;number&quot;&gt;6&lt;/span&gt;);
+
+one.AddNeighbour(six, &lt;span class=&quot;number&quot;&gt;14&lt;/span&gt;);
+one.AddNeighbour(three, &lt;span class=&quot;number&quot;&gt;9&lt;/span&gt;);
+one.AddNeighbour(two, &lt;span class=&quot;number&quot;&gt;7&lt;/span&gt;);
+
+two.AddNeighbour(three, &lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;);
+two.AddNeighbour(four, &lt;span class=&quot;number&quot;&gt;15&lt;/span&gt;);
+
+three.AddNeighbour(six, &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;);
+three.AddNeighbour(four, &lt;span class=&quot;number&quot;&gt;11&lt;/span&gt;);
+
+four.AddNeighbour(five, &lt;span class=&quot;number&quot;&gt;6&lt;/span&gt;);
+
+five.AddNeighbour(six, &lt;span class=&quot;number&quot;&gt;9&lt;/span&gt;);
+
+&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; graph = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; List&amp;lt;GraphNode&amp;lt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt;&amp;gt;&amp;gt; {one, two, three, four, five, six};
+
+&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; dijkstra = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; Dijkstra&amp;lt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt;&amp;gt;(graph);
+&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; path = dijkstra.FindShortestPathBetween(one, five);&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;I am currently working on an A* algorithm to use in place of this but I still think Dijkstra’s algorithm is an awesome algorithm and wanted to provide a better&lt;span class=&quot;widont&quot;&gt;&amp;nbsp;&lt;/span&gt;implementation.&lt;/p&gt;
+</description><pubdate>Sun Dec 21 2014 10:00:00 GMT+1000 (Australian Eastern Standard Time)</pubdate><link>http://valantonini.com/2014/12/21/</link><guid isPermaLink="true">http://valantonini.com/2014/12/21/</guid></item><item><title>A quick WASD controller for Unity3d</title><description>&lt;p&gt;A quick but effective &lt;span class=&quot;caps&quot;&gt;WASD&lt;/span&gt; controller for&lt;span class=&quot;widont&quot;&gt;&amp;nbsp;&lt;/span&gt;Unity3d.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-cs&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;using&lt;/span&gt; System;
+&lt;span class=&quot;keyword&quot;&gt;using&lt;/span&gt; UnityEngine;
+&lt;span class=&quot;keyword&quot;&gt;using&lt;/span&gt; System.Collections;
+&lt;span class=&quot;keyword&quot;&gt;using&lt;/span&gt; System.Collections.Generic;
+
+&lt;span class=&quot;keyword&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Character&lt;/span&gt;
+{
+    &lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;KeyboardController&lt;/span&gt;
+    {
+        &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Move&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;Transform transform&lt;/span&gt;)&lt;/span&gt;
+        {
+            &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; velocity = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; Vector3 ();
+            &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; movement = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; Vector3 ();
+
+            &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; inAirMultiplier = &lt;span class=&quot;number&quot;&gt;0.25f&lt;/span&gt;;
+            &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; speed = &lt;span class=&quot;number&quot;&gt;17f&lt;/span&gt;;
+
+            &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
+            {
+                &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; z = Input.GetKey(KeyCode.W) ? &lt;span class=&quot;number&quot;&gt;1.0f&lt;/span&gt; : &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;
+                z = Input.GetKey(KeyCode.S) ? &lt;span class=&quot;number&quot;&gt;-1.0f&lt;/span&gt; : z;
+
+                &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; x = Input.GetKey(KeyCode.D) ? &lt;span class=&quot;number&quot;&gt;1.0f&lt;/span&gt; : &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;
+                x = Input.GetKey(KeyCode.A) ? &lt;span class=&quot;number&quot;&gt;-1.0f&lt;/span&gt; : x;
+
+                movement.z = speed * z;
+                movement.x = speed*x;
+
+                &lt;span class=&quot;comment&quot;&gt;//face movement dir&lt;/span&gt;
+                Vector3 keyboardPosition = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; Vector3(x, &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;, z);
+                transform.LookAt(transform.position + keyboardPosition);
+            }
+
+            velocity.y += Physics.gravity.y * Time.deltaTime;
+            movement.x *= inAirMultiplier;
+            movement.z *= inAirMultiplier;
+
+            movement += velocity;
+            movement += Physics.gravity;
+            movement *= Time.deltaTime;
+            transform.GetComponent&amp;lt;CharacterController&amp;gt;().Move(movement);
+        }
+    }
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Use it in a script on an object with a character controller, rigid body and collider as&lt;span class=&quot;widont&quot;&gt;&amp;nbsp;&lt;/span&gt;below:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-cs&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;using&lt;/span&gt; UnityEngine;
+&lt;span class=&quot;keyword&quot;&gt;using&lt;/span&gt; System.Collections;
+&lt;span class=&quot;keyword&quot;&gt;using&lt;/span&gt; Character;
+
+&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;MyPlayerController&lt;/span&gt; : &lt;span class=&quot;title&quot;&gt;MonoBehaviour&lt;/span&gt; {
+    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Start&lt;/span&gt; (&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;)&lt;/span&gt; {
+    }
+    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Update&lt;/span&gt; (&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;)&lt;/span&gt; {
+        KeyboardController.Move (transform);
+    }
+}&lt;/code&gt;&lt;/pre&gt;
+</description><pubdate>Thu Apr 03 2014 10:00:00 GMT+1000 (Australian Eastern Standard Time)</pubdate><link>http://valantonini.com/2014/04/03/</link><guid isPermaLink="true">http://valantonini.com/2014/04/03/</guid></item><item><title>Removing a blocked ip from fail2ban on a Linode</title><description>&lt;p&gt;I have a Linode setup with &lt;a href=&quot;http://www.fail2ban.org&quot; title=&quot;fail2ban&quot;&gt;fail2ban&lt;/a&gt; running to ban ip’s after several failed login attempts. Setting it up is as simple as following the directions provided by Linode &lt;a href=&quot;https://library.linode.com/security/fail2ban&quot; title=&quot;setting up fail2ban on Linode&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;If your like me and manage to ban your own ip this how to fix&lt;span class=&quot;widont&quot;&gt;&amp;nbsp;&lt;/span&gt;it.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Log into the linode&lt;span class=&quot;widont&quot;&gt;&amp;nbsp;&lt;/span&gt;manager.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Click on the remote access&lt;span class=&quot;widont&quot;&gt;&amp;nbsp;&lt;/span&gt;tab.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;In the console access click the ‘Lish via Ajaxterm Launch Lish Ajax Console’ link. This will launch a shell in the browser. Login with your username and password and become a&lt;span class=&quot;widont&quot;&gt;&amp;nbsp;&lt;/span&gt;superuser:&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;sudo su&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&quot;4&quot;&gt;
+&lt;li&gt;Check if you are indeed banned (replace 192.168.1.1 with your&lt;span class=&quot;widont&quot;&gt;&amp;nbsp;&lt;/span&gt;ipaddress):&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;iptables -L -n | grep 192.168.1.1&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If you get a line like the one below you have been&lt;span class=&quot;widont&quot;&gt;&amp;nbsp;&lt;/span&gt;banned.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;DROP    all    --    192.168.1.1    0.0.0.0/0&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&quot;5&quot;&gt;
+&lt;li&gt;Determine the name of the jail your&lt;span class=&quot;widont&quot;&gt;&amp;nbsp;&lt;/span&gt;in.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;iptables -L | grep fail2ban&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This should give you an output similar to&lt;span class=&quot;widont&quot;&gt;&amp;nbsp;&lt;/span&gt;this.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;fail2ban-ssh   tcp   --   anywhere   anywhere   multiport dports ssh
+Chain fail2ban-ssh (1 references)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;In my case there was only 1 entry,&lt;span class=&quot;widont&quot;&gt;&amp;nbsp;&lt;/span&gt;fail2ban-ssh.&lt;/p&gt;
+&lt;ol start=&quot;6&quot;&gt;
+&lt;li&gt;Use this in your next query to remove your&lt;span class=&quot;widont&quot;&gt;&amp;nbsp;&lt;/span&gt;ip:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;iptables -D fail2ban-ssh -s 192.168.1.1 -j DROP&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You should now be unbanned and can log out of the web&lt;span class=&quot;widont&quot;&gt;&amp;nbsp;&lt;/span&gt;console.&lt;/p&gt;
+</description><pubdate>Wed Oct 30 2013 10:00:00 GMT+1000 (Australian Eastern Standard Time)</pubdate><link>http://valantonini.com/2013/10/30/</link><guid isPermaLink="true">http://valantonini.com/2013/10/30/</guid></item><item><title>Graphs and pathing in C#</title><description>&lt;p&gt;&lt;em&gt;&lt;span class=&quot;caps&quot;&gt;UPDATE&lt;/span&gt; 2:&lt;/em&gt; This article is now out of date. Please visit &lt;a href=&quot;/2014/12/21&quot; title=&quot;Graphs and Pathing in C# – part 2&quot;&gt;Graphs and Pathing in C# – part&lt;span class=&quot;widont&quot;&gt;&amp;nbsp;&lt;/span&gt;2&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;span class=&quot;caps&quot;&gt;UPDATE&lt;/span&gt;:&lt;/em&gt; There was a good article that I enjoyed at &lt;a href=&quot;http://www.developingthefuture.net/dijkstra-algorithm-graph-shortest-path/&quot; title=&quot;developing the future&quot;&gt;developing the future&lt;/a&gt; recently that also looks at Dijkstra’s&lt;span class=&quot;widont&quot;&gt;&amp;nbsp;&lt;/span&gt;algorithm.&lt;/p&gt;
+&lt;p&gt;I am currently working on a game (in Unity3d) with my friends. It’s an isometric dungeon crawler similar to Diablo for android. We are planning to release it as a free game just so we can get a feel of the whole process of developing a game, using the tools and getting it into the Play&lt;span class=&quot;widont&quot;&gt;&amp;nbsp;&lt;/span&gt;store.&lt;/p&gt;
+&lt;p&gt;One of the decisions we made was to have a dynamic level generator. There are many good resources on dynamic level generation such as &lt;a href=&quot;http://donjon.bin.sh/fantasy/dungeon/about/&quot; title=&quot;donjon dungeon generator&quot;&gt;donjon&lt;/a&gt; but I wanted to try and see what kind of approach I’d come up with by myself (knowing very well it would probably be a far from perfect&lt;span class=&quot;widont&quot;&gt;&amp;nbsp;&lt;/span&gt;solution).&lt;/p&gt;
+&lt;p&gt;My approach was to create a bunch of rooms in a 2D matrix and join them together. The generating and placing of random rooms was easy but I was struggling on how I would join them together. I thought back to my studies in Japan where I had the pleasure of taking “Data and Algorithm Structure” under one of my favorite teachers of all time &lt;a href=&quot;http://cleo.ci.seikei.ac.jp/~atsuko/index.html&quot; title=&quot;Ikegami Atsuko&quot;&gt;Ikegami Atsuko (池上敦子)&lt;/a&gt;. She has won a series of awards for her papers on pathing and scheduling and is a fantastic teacher. I remembered a lesson in which she presented Dijkstra’s algorithm for shortest paths and decided to opt for&lt;span class=&quot;widont&quot;&gt;&amp;nbsp;&lt;/span&gt;that.&lt;/p&gt;
+&lt;p&gt;I thought I’d use Dijkstra’s algorithm to join the 2 center co-ordinates of the room. This is probably a heavy weight approach requiring the whole graph to be generated before the calculating could begin but would guarantee the optimal path (we don’t want the player spending all the time in corridors) and ensure the corridor would choose the optimal [N/S/E/W] door to exit/enter without having to determine all the paths between the 2 rooms&lt;span class=&quot;widont&quot;&gt;&amp;nbsp;&lt;/span&gt;walls.&lt;/p&gt;
+&lt;p&gt;The first thing I did was to read the dungeon matrix into a graph only to find that C# didn’t have a built in graph collection. A quick google shows there are many trade offs to consider when developing a graph and these trade offs are all specific to what the graph is going to be used for. While I am sure there are plenty of graph libraries already out there that would suit my purpose I decided I would build my own to see how it would all piece together. I used &lt;a href=&quot;http://msdn.microsoft.com/en-us/library/ms379574(v=vs.80).aspx&quot; title=&quot;msdn&quot;&gt;this&lt;/a&gt; as a launch pad and proceeded to simplify it and take advantage of some of C#’s new&lt;span class=&quot;widont&quot;&gt;&amp;nbsp;&lt;/span&gt;features.&lt;/p&gt;
+&lt;p&gt;The result (and purpose of this post) is a C# graph library with shortest path algorithm that I’d like to share with the world (and also my first Github project). You can get it &lt;a href=&quot;https://github.com/valantonini/GraphCollection&quot; title=&quot;github/valantonini/graphcollection&quot;&gt;on&lt;span class=&quot;widont&quot;&gt;&amp;nbsp;&lt;/span&gt;githiub&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Just a quick note, if your wondering why I keep a list of unvisited nodes &lt;span class=&quot;caps&quot;&gt;AND&lt;/span&gt; keep a visited boolean on the GraphNode (see below) and proceed to update them both, it’s because of the cost of traversing the list to find if a node’s neighbor has been visited. This was causing the algorithm to grind to a halt (I was able to get pathing on a Galaxy S3 from 27 seconds to 2.5 seconds by doing this and some other minor tweaks). Also, it may seem like a GraphNode should not be responsible for carrying the distance value used in Dijkstra’s algorithm (not to be confused with the edge cost between 2 nodes) but this would once again mean I would not need to perform a lookup when checking for the current distance of a&lt;span class=&quot;widont&quot;&gt;&amp;nbsp;&lt;/span&gt;node.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-cs&quot;&gt;public class Dijkstra&amp;lt;T&amp;gt;
+{
+    // elided
+
+    private List&amp;lt;GraphNode&amp;lt;T&amp;gt;&amp;gt; _unvisited;
+
+    // elided
+
+    public void MarkAsVisited(GraphNode&amp;lt;T&amp;gt; node)
+    {
+        node.Visited = true;
+        _unvisited.Remove(node);
+    }
+
+    // elided
+
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&quot;language-cs&quot;&gt;public class GraphNode&amp;lt;T&amp;gt;
+{
+    public T Value { get; set; }
+    public int Distance { get; set; }
+    public bool Visited { get; set; }
+
+    // elided
+
+}&lt;/code&gt;&lt;/pre&gt;
+</description><pubdate>Sat Aug 03 2013 10:00:00 GMT+1000 (Australian Eastern Standard Time)</pubdate><link>http://valantonini.com/2013/08/03/</link><guid isPermaLink="true">http://valantonini.com/2013/08/03/</guid></item><item><title>How to tell if a transform is facing another in Unity3d</title><description>&lt;p&gt;A helpful method to check to see if a transform is facing another transform in&lt;span class=&quot;widont&quot;&gt;&amp;nbsp;&lt;/span&gt;Unity3d&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-cs&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;bool&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;IsFacing&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;Transform target&lt;/span&gt;)&lt;/span&gt;
+{
+    Vector3 forward = transform.TransformDirection(Vector3.forward);
+    Vector3 toTarget = target.position - transform.position;
+    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; Vector3.Dot(forward, toTarget) &amp;gt; &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;
+}&lt;/code&gt;&lt;/pre&gt;
+</description><pubdate>Mon Jun 10 2013 10:00:00 GMT+1000 (Australian Eastern Standard Time)</pubdate><link>http://valantonini.com/2013/06/10/</link><guid isPermaLink="true">http://valantonini.com/2013/06/10/</guid></item></channel></rss>
