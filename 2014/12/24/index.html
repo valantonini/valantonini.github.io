@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/png" href="/images/favicon.png">
+    <link rel="stylesheet" href="/styles/site.min.css">
+    <script src="/scripts/site.min.js"></script>
+    <title>A priority queue in C# - part 2 - valantonini.com
+    </title>
+  </head>
+  <body>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="container is-fluid">
+        <div class="navbar-brand"><a class="navbar-item" href="/"><img src="/images/logo.png"></a><a class="navbar-burger burger" role="button" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample"><span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span></a></div>
+        <div class="navbar-menu" id="navbarBasicExample">
+          <div class="navbar-start"><a class="navbar-item" href="/" title="blog">blog</a><a class="navbar-item" href="/about" title="about">about</a><a class="navbar-item" href="/resume" title="resume">resume</a><a class="navbar-item" href="/contact" title="contact">contact</a><a class="navbar-item" href="/search" title="search">search</a></div>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <div class="container unti-widescreen">
+        <div class="post">
+          <header>
+            <h1>A priority queue in C# - part 2</h1>
+          </header>
+          <article>
+            <section><p>In <a href="/2014/12/22" title="Priority Queue in C#">my last post</a> I had created a simple priority queue. Unfortunately it would sort itself each time an item is popped/dequeued. I have created <a href="https://github.com/valantonini/PriorityQueue" title="valantonini/PriorityQueue">a better priority queue that only sorts itself when the indexed value is<span class="widont">&nbsp;</span>changed</a>.</p>
+<p>I do this by having items implement the provided IPrioritizable interface. I was initially going to build it on the <a href="http://msdn.microsoft.com/en-us/library/system.componentmodel.inotifypropertychanged(v=vs.110).aspx" title="MSDN INotifyPropertyChanged Interface">INotifyPropertyChanged interface</a> but I thought this solution was simpler. The interface has 2 methods to Add/Remove an Action that notifies the PriorityQueue that it needs to be sorted. It now also requires a IComparer be provided. An example of this would<span class="widont">&nbsp;</span>be:</p>
+<pre><code class="language-cs">using System;
+using System.Collections.Generic;
+
+namespace PriorityQueueCollection.Tests
+{
+    public class PrioritizableItem : IPrioritizable
+    {
+        private Action _indexUpdated;
+        private int _value;
+
+        public int Value
+        {
+            get { return _value; }
+            set
+            {
+                _indexUpdated();
+                _value = value;
+            }
+        }
+
+        public PrioritizableItem(int value)
+        {
+            _indexUpdated = () =&gt; { };
+            Value = value;
+        }
+
+        public void AddIndexUpdatedAction(Action indexUpdated)
+        {
+            _indexUpdated = indexUpdated;
+        }
+
+        public void RemoveIndexUpdatedAction()
+        {
+            _indexUpdated = () =&gt; { };
+        }
+    }
+
+    public class ComparePrioritizableItem : IComparer&lt;PrioritizableItem&gt;
+    {
+        public int Compare(PrioritizableItem x, PrioritizableItem y)
+        {
+            if (x.Value &gt; y.Value)
+            {
+                return 1;
+            }
+
+            if (x.Value &lt; y.Value)
+            {
+                return -1;
+            }
+
+            return 0;
+        }
+    }
+}</code></pre>
+<p>Whilst not as simple as it’s predecessor it wastes less time ordering the queue on sequential<span class="widont">&nbsp;</span>pops.</p>
+</section>
+          </article>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <section><a href="https://github.com/valantonini" title="github.com/valantonini"><img src="/images/icons/social/github.png"></a></section>
+      <section class="attribution">
+        <p>&copy; 2019 val antonini &mdash; powered by&nbsp;<a href="https://github.com/jnordberg/wintersmith" target="_blank">wintersmith</a></p>
+        <p>background from <a href="https://subtlepatterns.com" title="https://subtlepatterns.com" target="_blank">subtlepatterns.com</a></p>
+      </section>
+    </footer>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-42499658-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </body>
+</html>
