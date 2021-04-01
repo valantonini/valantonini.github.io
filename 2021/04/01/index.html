@@ -29,9 +29,9 @@
           <article>
             <section><p>A few years ago I needed a path finding algorithm in a hurry for a procedural level generator I was trying to write. I
 managed to find a C# one that supported a number of options and was focused on performance. I reached out to the author
-if they minded if I changed it a bit and package it up as a nuget. The author agreed and I used the library in a couple
+if they minded if I <a href="https://github.com/valantonini/AStar">changed it a bit and package it up as a nuget</a>. The author agreed, and I used the library in a couple
 procedural level generators such as <a href="/2018/09/30">this<span class="widont">&nbsp;</span>one</a>.</p>
-<p>Recently a couple people reached out with some questions about the implementations of it including an interesting one
+<p>Recently a couple of people reached out with some questions about the implementations of it including an interesting one
 from<span class="widont">&nbsp;</span>Lucas:</p>
 <blockquote>
 <p>…</p>
@@ -43,8 +43,8 @@ and I’d like my unit’s to pathfind to tiles the user built that increase uni
 </blockquote>
 <p>I thought this was an interesting question and decided to take this opportunity to completely rewrite it trading off a
 little speed for some more organized code allowing easier extensibility and<span class="widont">&nbsp;</span>readability.</p>
-<p>The basic permise of the algorithm is that as the A* algorithm is fanning out checking nodes, it calculates the nodes
-distance from it’s start position (G) and the distance to the target position (H) and adds these togethor to produce<span class="widont">&nbsp;</span>F.</p>
+<p>The basic premise of the algorithm is that as the A* algorithm is fanning out checking nodes, it calculates the nodes
+distance from its start position (G) and the distance to the target position (H) and adds these togethor to produce<span class="widont">&nbsp;</span>F.</p>
 <pre><code class="language-cs"><span class="keyword">var</span> updatedSuccessor = <span class="keyword">new</span> PathFinderNode(
                               position: successor.Position,
                               g: newG,
@@ -82,7 +82,8 @@ other tests and it appeared to<span class="widont">&nbsp;</span>work:</p>
 <span class="number">1</span> * <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> * <span class="number">1</span> 
 <span class="number">1</span> <span class="number">1</span> * * * <span class="number">1</span> <span class="number">1</span> 
 <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> </code></pre>
-<p>I’ll need to do some further expirementing but it seems<span class="widont">&nbsp;</span>promising.</p>
+<p>I’ll need to do some further tests, but it seems<span class="widont">&nbsp;</span>promising. </p>
+<p>You can find the algorithm on <a href="https://github.com/valantonini/AStar">github</a>.</p>
 </section>
           </article>
         </div>

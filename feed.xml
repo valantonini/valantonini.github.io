@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>valantonini.com</title><description>val antonini - brisbane based software developer</description><link>http://valantonini.com</link><atom:link href="http://valantonini.com" rel="self" type="application/rss+xml"></atom:link><item><title>A better A* algorithm</title><description>&lt;p&gt;A few years ago I needed a path finding algorithm in a hurry for a procedural level generator I was trying to write. I
 managed to find a C# one that supported a number of options and was focused on performance. I reached out to the author
-if they minded if I changed it a bit and package it up as a nuget. The author agreed and I used the library in a couple
+if they minded if I &lt;a href=&quot;https://github.com/valantonini/AStar&quot;&gt;changed it a bit and package it up as a nuget&lt;/a&gt;. The author agreed, and I used the library in a couple
 procedural level generators such as &lt;a href=&quot;/2018/09/30&quot;&gt;this&lt;span class=&quot;widont&quot;&gt;&amp;nbsp;&lt;/span&gt;one&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Recently a couple people reached out with some questions about the implementations of it including an interesting one
+&lt;p&gt;Recently a couple of people reached out with some questions about the implementations of it including an interesting one
 from&lt;span class=&quot;widont&quot;&gt;&amp;nbsp;&lt;/span&gt;Lucas:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;…&lt;/p&gt;
@@ -14,8 +14,8 @@ and I’d like my unit’s to pathfind to tiles the user built that increase uni
 &lt;/blockquote&gt;
 &lt;p&gt;I thought this was an interesting question and decided to take this opportunity to completely rewrite it trading off a
 little speed for some more organized code allowing easier extensibility and&lt;span class=&quot;widont&quot;&gt;&amp;nbsp;&lt;/span&gt;readability.&lt;/p&gt;
-&lt;p&gt;The basic permise of the algorithm is that as the A* algorithm is fanning out checking nodes, it calculates the nodes
-distance from it’s start position (G) and the distance to the target position (H) and adds these togethor to produce&lt;span class=&quot;widont&quot;&gt;&amp;nbsp;&lt;/span&gt;F.&lt;/p&gt;
+&lt;p&gt;The basic premise of the algorithm is that as the A* algorithm is fanning out checking nodes, it calculates the nodes
+distance from its start position (G) and the distance to the target position (H) and adds these togethor to produce&lt;span class=&quot;widont&quot;&gt;&amp;nbsp;&lt;/span&gt;F.&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-cs&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; updatedSuccessor = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; PathFinderNode(
                               position: successor.Position,
                               g: newG,
@@ -53,7 +53,8 @@ other tests and it appeared to&lt;span class=&quot;widont&quot;&gt;&amp;nbsp;&lt
 &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt; * &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt; * &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt; 
 &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt; * * * &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt; 
 &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt; &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;I’ll need to do some further expirementing but it seems&lt;span class=&quot;widont&quot;&gt;&amp;nbsp;&lt;/span&gt;promising.&lt;/p&gt;
+&lt;p&gt;I’ll need to do some further tests, but it seems&lt;span class=&quot;widont&quot;&gt;&amp;nbsp;&lt;/span&gt;promising. &lt;/p&gt;
+&lt;p&gt;You can find the algorithm on &lt;a href=&quot;https://github.com/valantonini/AStar&quot;&gt;github&lt;/a&gt;.&lt;/p&gt;
 </description><pubdate>Thu Apr 01 2021 00:00:00 GMT+0000 (Coordinated Universal Time)</pubdate><link>http://valantonini.com/2021/04/01/</link><guid isPermaLink="true">http://valantonini.com/2021/04/01/</guid></item><item><title>Site rewrite</title><description>&lt;p&gt;I moved this blog away from wordpress in 2014 and decided to write it using &lt;a href=&quot;https://jekyllrb.com&quot; title=&quot;Jekyll&quot;&gt;Jekyll&lt;/a&gt;. At the time I really was fascinated by Ruby and wanted to learn it and it seemed like a great opportunity. I was also unhappy with the responsive wordpress themes at the&lt;span class=&quot;widont&quot;&gt;&amp;nbsp;&lt;/span&gt;time.&lt;/p&gt;
 &lt;p&gt;I’ve been working almost exclusively in Javascript and Typescript the last 6 months and have really enjoyed it. I decided to rewrite the blog in &lt;a href=&quot;http://wintersmith.io&quot; title=&quot;Wintersmith&quot;&gt;Wintersmith&lt;/a&gt; as it seemed like easier to maintain and I feel ok open sourcing it as it’s not a bunch of barely functioning, badly written Ruby and spaghetti&lt;span class=&quot;widont&quot;&gt;&amp;nbsp;&lt;/span&gt;css.&lt;/p&gt;
 &lt;p&gt;I still love my initial design I came up with in 2014 and used more or less the same design. It’s also been 6 months since I’ve used jQuery for web development so I opted for a custom compiled &lt;a href=&quot;https://bulma.io&quot; title=&quot;Bulma&quot;&gt;Bulma&lt;/a&gt; instead of Bootstrap as I didn’t want any JQuery dependencies. I initially started out using &lt;a href=&quot;https://picturepan2.github.io/spectre/&quot; title=&quot;Spectre&quot;&gt;Spectre&lt;/a&gt; but found some of the things I really liked such as off canvas was marked as experimental and not quite working how I&lt;span class=&quot;widont&quot;&gt;&amp;nbsp;&lt;/span&gt;intended.&lt;/p&gt;
