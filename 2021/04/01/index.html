@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed for valantonini.com" href="/feed">
+    <link rel="shortcut icon" type="image/png" href="/images/favicon.png">
+    <link rel="stylesheet" href="/styles/site.min.css">
+    <script src="/scripts/site.min.js"></script>
+    <title>A better A* algorithm - valantonini.com
+    </title>
+  </head>
+  <body>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="container is-fluid">
+        <div class="navbar-brand"><a class="navbar-item" href="/"><img src="/images/logo.png"></a><a class="navbar-burger burger" role="button" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample"><span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span></a></div>
+        <div class="navbar-menu" id="navbarBasicExample">
+          <div class="navbar-start"><a class="navbar-item" href="/" title="blog">blog</a><a class="navbar-item" href="/about" title="about">about</a><a class="navbar-item" href="/resume" title="resume">resume</a><a class="navbar-item" href="/contact" title="contact">contact</a><a class="navbar-item" href="/search" title="search">search</a></div>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <div class="container unti-widescreen">
+        <div class="post">
+          <header>
+            <h1>A better A* algorithm</h1>
+          </header>
+          <article>
+            <section><p>A few years ago I needed a path finding algorithm in a hurry for a procedural level generator I was trying to write. I
+managed to find a C# one that supported a number of options and was focused on performance. I reached out to the author
+if they minded if I changed it a bit and package it up as a nuget. The author agreed and I used the library in a couple
+procedural level generators such as <a href="/2018/09/30">this<span class="widont">&nbsp;</span>one</a>.</p>
+<p>Recently a couple people reached out with some questions about the implementations of it including an interesting one
+from<span class="widont">&nbsp;</span>Lucas:</p>
+<blockquote>
+<p>…</p>
+<p>I was wondering if you had any advice on how I might be able to add a priority to tiles.
+For example, I’m adding different tiles that increase unit speed, and others that slow it down,
+and I’d like my unit’s to pathfind to tiles the user built that increase unit movement speed
+(if it happens to actually increase the trip time given the travel<span class="widont">&nbsp;</span>path).</p>
+<p>…</p>
+</blockquote>
+<p>I thought this was an interesting question and decided to take this opportunity to completely rewrite it trading off a
+little speed for some more organized code allowing easier extensibility and<span class="widont">&nbsp;</span>readability.</p>
+<p>The basic permise of the algorithm is that as the A* algorithm is fanning out checking nodes, it calculates the nodes
+distance from it’s start position (G) and the distance to the target position (H) and adds these togethor to produce<span class="widont">&nbsp;</span>F.</p>
+<pre><code class="language-cs"><span class="keyword">var</span> updatedSuccessor = <span class="keyword">new</span> PathFinderNode(
+                              position: successor.Position,
+                              g: newG,
+                              h:_heuristic.Calculate(successor.Position, end),
+                              parentNodePosition: q.Position
+                           );</code></pre>
+<p>The algorithm is constantly selecting the node with the lowest F value and calculating F for it’s neighbours. If the
+neighbour has already been evaluated, the algorithm checks to see if it would be a faster path to it. This is needed as
+distance to neighbour nodes may not be even. Constantly evaluating the node with the next smallest F value and the F
+value being derived off the distance from home + the distance to the target means the algorithm naturally defers assesing
+nodes that are away from both the start and end until it has hit an obstacle and requires to assess a longer path to get
+around<span class="widont">&nbsp;</span>it.</p>
+<p><img src="/images/posts/20210401/Astarpathfinding.gif" alt="A* Example" title="A* Example"></p>
+<div class="image-attribution">
+    <a href="https://commons.wikimedia.org/wiki/File:Astar_progress_animation.gif">Subh83</a>, <a href="https://creativecommons.org/licenses/by/3.0"><span class="caps">CC</span> <span class="caps">BY</span> 3.0</a>, via Wikimedia Commons
+</div>
+
+<p>Because the world passed into the algorithm is a multidimensional array of short where 0 indicates a closed node, I
+wondered if I could just add the value of the open tile the user passed in to offset the G value (the distance from
+home). This should guide the algorithm into favouring higher positive<span class="widont">&nbsp;</span>numbers.</p>
+<pre><code class="language-cs"><span class="keyword">var</span> updatedSuccessor = <span class="keyword">new</span> PathFinderNode(
+                              position: successor.Position,
+                              g: newG,
+                              h:_heuristic.Calculate(successor.Position, end) - _world[successor.Position],
+                              parentNodePosition: q.Position
+                           );</code></pre>
+<p>I set up a unit test to see if I could make it take an unusual path from top left to top right without breaking the
+other tests and it appeared to<span class="widont">&nbsp;</span>work:</p>
+<pre><code class="language-cs"><span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">5</span>
+<span class="number">1</span> <span class="number">5</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">5</span> <span class="number">1</span>
+<span class="number">1</span> <span class="number">1</span> <span class="number">5</span> <span class="number">5</span> <span class="number">5</span> <span class="number">1</span> <span class="number">1</span>
+<span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span>
+
+* <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> * 
+<span class="number">1</span> * <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> * <span class="number">1</span> 
+<span class="number">1</span> <span class="number">1</span> * * * <span class="number">1</span> <span class="number">1</span> 
+<span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> </code></pre>
+<p>I’ll need to do some further expirementing but it seems<span class="widont">&nbsp;</span>promising.</p>
+</section>
+          </article>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <section><a href="https://github.com/valantonini" title="github.com/valantonini"><img src="/images/icons/social/github.png"></a></section>
+      <section class="attribution">
+        <p>&copy; 2021 val antonini &mdash; powered by&nbsp;<a href="https://github.com/jnordberg/wintersmith" target="_blank">wintersmith</a></p>
+        <p>background from <a href="https://subtlepatterns.com" title="https://subtlepatterns.com" target="_blank">subtlepatterns.com</a></p>
+        <p><a href="https://github.com/valantonini/arakawa" title="https://github.com/valantonini/arakawa" target="_blank" style="text-decoration: underline;">this website is open source</a></p>
+      </section>
+    </footer>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-42499658-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </body>
+</html>
