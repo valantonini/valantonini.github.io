@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed for valantonini.com" href="/feed">
+    <link rel="shortcut icon" type="image/png" href="/images/favicon.png">
+    <link rel="stylesheet" href="/styles/site.min.css">
+    <script src="/scripts/site.min.js"></script>
+    <title>why go? - valantonini.com
+    </title>
+  </head>
+  <body>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="container is-fluid">
+        <div class="navbar-brand"><a class="navbar-item" href="/"><img src="/images/logo.png"></a><a class="navbar-burger burger" role="button" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample"><span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span></a></div>
+        <div class="navbar-menu" id="navbarBasicExample">
+          <div class="navbar-start"><a class="navbar-item" href="/" title="blog">blog</a><a class="navbar-item" href="/about" title="about">about</a><a class="navbar-item" href="/resume/antonini_val_resume.pdf" title="resume" target="_blank">resume</a><a class="navbar-item" href="/contact" title="contact">contact</a><a class="navbar-item" href="/search" title="search">search</a></div>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <div class="container unti-widescreen">
+        <div class="post">
+          <header>
+            <h1>why go?</h1>
+          </header>
+          <article>
+            <section><p>I have been asked a few times why I like Go so much. If I had to choose only 1 thing, it would be
+the philosophy of simplicity that underpins the language, standard libraries, packages, and tooling. 
+Whilst no language is perfect, I appreciate its trade-offs for the following benefits. It’s worth to note
+these are purely personal opinion and not necessarily specific or restricted to Go, simply things that are 
+important to me that you get for<span class="widont">&nbsp;</span>free.</p>
+<h2 id="language">language</h2>
+<ul>
+<li>structural typing allows for implicit interface implementation allowing for easy substitution, mocking, 
+testing and dependency<span class="widont">&nbsp;</span>injection</li>
+<li>concise syntax with few keywords that makes all Go code feel<span class="widont">&nbsp;</span>familiar</li>
+<li>fast build / run / test<span class="widont">&nbsp;</span>times</li>
+<li>compiles to machine code without sacrificing <span class="caps">GC</span> or runtime<span class="widont">&nbsp;</span>reflection</li>
+<li>single binary (no runtime complaints about assemblies not matching manifests or multiple projects overwriting each<span class="widont">&nbsp;</span>other)</li>
+<li>straight forward access modifiers expressed by the capitalisation of first<span class="widont">&nbsp;</span>letters</li>
+</ul>
+<h2 id="tooling">tooling</h2>
+<ul>
+<li>good documentation that is easy to read and navigate (and produced from<span class="widont">&nbsp;</span>code)</li>
+<li>built in documentation<span class="widont">&nbsp;</span>tools</li>
+<li>compilable examples that become<span class="widont">&nbsp;</span>documentation</li>
+<li>a built-in, opinionated formatter that can’t be<span class="widont">&nbsp;</span>tweaked</li>
+<li>built in test<span class="widont">&nbsp;</span>tools</li>
+<li>no need to manage dependencies with a 3<span class="ord">rd</span> party tool like nuget or<span class="widont">&nbsp;</span>npm</li>
+<li>vendor command for reproducible<span class="widont">&nbsp;</span>builds</li>
+<li>an easy way to redirect dependencies locally to test<span class="widont">&nbsp;</span>changes</li>
+</ul>
+<h2 id="conventions-practices-and-philosophy">conventions, practices and<span class="widont">&nbsp;</span>philosophy</h2>
+<ul>
+<li>Go convention doesn’t prefix interfaces with ‘I’ (resulting in all the interface files being grouped together seperate 
+from their implementation is the project<span class="widont">&nbsp;</span>tree)</li>
+<li>tests sit next to the file they are testing and not in a separate<span class="widont">&nbsp;</span>project</li>
+<li>a strong opposition to abstraction and strong push towards<span class="widont">&nbsp;</span>simplicity</li>
+<li>a philosophy of optimizing for the reader instead of the<span class="widont">&nbsp;</span>writer</li>
+</ul>
+<h2 id="controversial">controversial</h2>
+<ul>
+<li>tabs over spaces<span class="widont">&nbsp;</span>👻</li>
+</ul>
+</section>
+          </article>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <section><a href="https://github.com/valantonini" title="github.com/valantonini"><img class="icon" src="/images/icons/social/github.png"></a></section>
+      <section class="attribution">
+        <p>&copy; 2022 val antonini &mdash; powered by&nbsp;<a href="https://github.com/jnordberg/wintersmith" target="_blank">wintersmith</a></p>
+        <p>background from <a href="https://subtlepatterns.com" title="https://subtlepatterns.com" target="_blank">subtlepatterns.com</a></p>
+        <p><a href="https://github.com/valantonini/arakawa" title="https://github.com/valantonini/arakawa" target="_blank" style="text-decoration: underline;">this website is open source</a></p>
+      </section>
+    </footer>
+  </body>
+</html>
